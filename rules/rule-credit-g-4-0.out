@@ -1,0 +1,187 @@
+- residence_since: The longer the residence, the more likely to get credit.
+- own_telephone: Having a telephone is more likely to get credit.
+- job: A better job is more likely to get credit.
+- housing: Owning a house is more likely to get credit.
+- checking_status: Having a checking account with a higher balance is more likely to get credit.
+- num_dependents: The more dependents, the less likely to get credit.
+- property_magnitude: Having more valuable property is more likely to get credit.
+- credit_history: A good credit history is more likely to get credit.
+- purpose: Some purposes are more likely to get credit, such as business or used car.
+- other_parties: Having other parties involved is less likely to get credit.
+
+Step 2. 
+10 different conditions for class "no":
+- residence_since is within range of [0, 2]
+- own_telephone is none
+- job is unskilled resident
+- housing is for free
+- checking_status is <0
+- num_dependents is >=2
+- property_magnitude is no known property
+- credit_history is critical/other existing credit
+- purpose is radio/tv
+- other_parties is guarantor
+
+10 different conditions for class "yes":
+- residence_since is >=3
+- own_telephone is yes
+- job is high qualif/self emp/mgmt
+- housing is own
+- checking_status is >=200
+- num_dependents is <=1
+- property_magnitude is real estate
+- credit_history is all paid
+- purpose is used car
+- other_parties is none
+
+---DIVIDER---
+
+- age: People with higher age tend to receive credit.
+- employment: People with stable employment tend to receive credit.
+- savings_status: People with higher savings tend to receive credit.
+- duration: People with a shorter duration tend to receive credit.
+- personal_status: People with a stable personal status tend to receive credit.
+- existing_credits: People with fewer existing credits tend to receive credit.
+- residence_since: People with a longer residence tend to receive credit.
+- credit_history: People with a good credit history tend to receive credit.
+- purpose: People who apply for credit for business or education tend to receive credit.
+- other_parties: People with no other parties tend to receive credit.
+
+Step 2. 10 different conditions per answer:
+
+10 different conditions for class "no":
+- age is <44
+- employment is unemployed
+- savings_status is <100
+- duration is >18
+- personal_status is male single
+- existing_credits is >1
+- residence_since is <3
+- credit_history is critical/other existing credit
+- purpose is business
+- other_parties is none
+
+10 different conditions for class "yes":
+- age is >44
+- employment is >=7
+- savings_status is >100
+- duration is <18
+- personal_status is female div/dep/mar
+- existing_credits is <=1
+- residence_since is >3
+- credit_history is all paid
+- purpose is used car
+- other_parties is none
+
+---DIVIDER---
+
+- own_telephone: People who have a telephone are more likely to get a credit.
+- foreign_worker: Foreign workers are less likely to get a credit.
+- num_dependents: People with more dependents are less likely to get a credit.
+- installment_commitment: People with a higher installment commitment are less likely to get a credit.
+- credit_amount: People who apply for a higher credit amount are less likely to get a credit.
+- job: People with a skilled job are more likely to get a credit.
+- employment: People who are employed for a longer period of time are more likely to get a credit.
+- personal_status: People who are married are more likely to get a credit.
+- other_parties: People who have other debtors or guarantors are more likely to get a credit.
+- housing: People who own their own home are more likely to get a credit.
+
+Step 2. 
+10 different conditions for class "no":
+- foreign_worker is yes
+- num_dependents is within range of [2, 5]
+- installment_commitment is within range of [3, 6]
+- credit_amount is within range of [1000, 3000]
+- job is unskilled resident
+- employment is within range of [1, 4]
+- personal_status is male single
+- other_parties is none
+- housing is rent
+- own_telephone is none
+
+10 different conditions for class "yes":
+- foreign_worker is no
+- num_dependents is within range of [0, 1]
+- installment_commitment is within range of [1, 2]
+- credit_amount is within range of [5000, 10000]
+- job is high qualif/self emp/mgmt
+- employment is within range of [7, 10]
+- personal_status is female div/dep/mar
+- other_parties is none
+- housing is own
+- own_telephone is yes
+
+---DIVIDER---
+
+- housing: People who own their own homes are more likely to receive a credit.
+- duration: The longer the duration of the credit, the more likely the person is to receive a credit.
+- property_magnitude: People who have more valuable property are more likely to receive a credit.
+- credit_amount: The higher the credit amount, the less likely the person is to receive a credit.
+- personal_status: People who are married are more likely to receive a credit.
+- other_parties: People who have other debtors or guarantors are more likely to receive a credit.
+- purpose: People who are taking out a credit for business purposes are more likely to receive a credit.
+- existing_credits: People who have more existing credits are less likely to receive a credit.
+- job: People who have a higher job status are more likely to receive a credit.
+- residence_since: People who have been living in their current residence for a longer period of time are more likely to receive a credit.
+
+Step 2. 10 different conditions for class "no":
+- housing is in [for free, rent]
+- duration is < 18
+- property_magnitude is in [no known property, car]
+- credit_amount is > 1553
+- personal_status is in [male single, male div/sep]
+- other_parties is none
+- purpose is in [furniture/equipment, radio/tv]
+- existing_credits is > 1
+- job is in [unskilled resident, unemp/unskilled non res]
+- residence_since is < 3
+
+10 different conditions for class "yes":
+- housing is own
+- duration is >= 18
+- property_magnitude is real estate
+- credit_amount is <= 1553
+- personal_status is in [female div/dep/mar, male mar/wid]
+- other_parties is none
+- purpose is in [used car, business]
+- existing_credits is <= 1
+- job is in [skilled, high qualif/self emp/mgmt]
+- residence_since is >= 3
+
+---DIVIDER---
+
+- other_payment_plans: People who have other payment plans (banks or stores) may have more financial burdens and thus may not be able to repay the credit.
+- own_telephone: People who have a telephone may have a stable income and thus may be able to repay the credit.
+- employment: People who are employed for a longer period of time may have a stable income and thus may be able to repay the credit.
+- num_dependents: People who have more dependents may have more financial burdens and thus may not be able to repay the credit.
+- personal_status: People who are married or have a stable relationship may have a more stable income and thus may be able to repay the credit.
+- savings_status: People who have more savings may have a more stable financial situation and thus may be able to repay the credit.
+- property_magnitude: People who own real estate or other valuable properties may have a more stable financial situation and thus may be able to repay the credit.
+- duration: People who have a longer credit duration may have a more stable financial situation and thus may be able to repay the credit.
+- job: People who have a high-paying job may have a more stable income and thus may be able to repay the credit.
+- credit_amount: People who apply for a larger credit amount may have more financial burdens and thus may not be able to repay the credit.
+
+Step 2. 
+10 different conditions for class "no":
+- other_payment_plans is in [bank, stores]
+- own_telephone is none
+- employment is in [1<=X<4, unemployed, <1]
+- num_dependents is >=2
+- personal_status is male single
+- savings_status is in [no known savings, <100]
+- property_magnitude is in [no known property, car]
+- duration is <12
+- job is in [unskilled resident, unemp/unskilled non res]
+- credit_amount is >=2000
+
+10 different conditions for class "yes":
+- other_payment_plans is none
+- own_telephone is yes
+- employment is >=7
+- num_dependents is <=1
+- personal_status is in [female div/dep/mar, male mar/wid]
+- savings_status is in [>=100, 500<=X<1000, >=1000]
+- property_magnitude is real estate
+- duration is >=24
+- job is in [skilled, high qualif/self emp/mgmt]
+- credit_amount is <2000

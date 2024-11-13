@@ -1,0 +1,169 @@
+def extracting_features_no(df_input):
+    df_output = pd.DataFrame()
+    df_output['age_range'] = (df_input['age'] >= 20) & (df_input['age'] <= 70)
+    df_output['job_in'] = df_input['job'].isin(['management', 'technician', 'entrepreneur', 'blue-collar', 'unknown', 'retired', 'admin.', 'services', 'self-employed', 'unemployed', 'housemaid', 'student'])
+    df_output['marital_in'] = df_input['marital'].isin(['married', 'single', 'divorced'])
+    df_output['education_in'] = df_input['education'].isin(['tertiary', 'secondary', 'unknown', 'primary'])
+    df_output['default_in'] = df_input['default'].isin(['no', 'yes'])
+    df_output['balance_range'] = (df_input['balance'] >= 0) & (df_input['balance'] <= 20000)
+    df_output['housing_in'] = df_input['housing'].isin(['yes', 'no'])
+    df_output['loan_in'] = df_input['loan'].isin(['no', 'yes'])
+    df_output['contact_in'] = df_input['contact'].isin(['unknown', 'cellular', 'telephone'])
+    df_output['day_range'] = (df_input['day'] >= 1) & (df_input['day'] <= 31)
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_yes(df_input):
+    df_output = pd.DataFrame()
+    df_output['age_range'] = (df_input['age'] >= 20) & (df_input['age'] <= 70)
+    df_output['job_in'] = df_input['job'].isin(['management', 'technician', 'entrepreneur', 'blue-collar', 'unknown', 'retired', 'admin.', 'services', 'self-employed', 'unemployed', 'housemaid', 'student'])
+    df_output['marital_in'] = df_input['marital'].isin(['married', 'single', 'divorced'])
+    df_output['education_in'] = df_input['education'].isin(['tertiary', 'secondary', 'unknown', 'primary'])
+    df_output['default_in'] = df_input['default'].isin(['no', 'yes'])
+    df_output['balance_range'] = (df_input['balance'] >= 0) & (df_input['balance'] <= 20000)
+    df_output['housing_in'] = df_input['housing'].isin(['yes', 'no'])
+    df_output['loan_in'] = df_input['loan'].isin(['no', 'yes'])
+    df_output['contact_in'] = df_input['contact'].isin(['unknown', 'cellular', 'telephone'])
+    df_output['day_range'] = (df_input['day'] >= 1) & (df_input['day'] <= 31)
+    return df_output
+
+---VERSION---
+
+def extracting_features_no(df_input):
+    df_output = pd.DataFrame()
+    df_output['age_range'] = (df_input['age'] >= 17) & (df_input['age'] <= 69)
+    df_output['job_in'] = df_input['job'].isin(['management', 'retired', 'technician', 'admin.', 'services', 'self-employed', 'unemployed', 'housemaid', 'student'])
+    df_output['marital_in'] = df_input['marital'].isin(['married', 'single', 'divorced'])
+    df_output['education_in'] = df_input['education'].isin(['tertiary', 'secondary', 'unknown', 'primary'])
+    df_output['default_in'] = df_input['default'].isin(['no', 'yes'])
+    df_output['balance_range'] = (df_input['balance'] >= 696) & (df_input['balance'] <= 17118)
+    df_output['housing_in'] = df_input['housing'].isin(['yes', 'no'])
+    df_output['loan_in'] = df_input['loan'].isin(['no', 'yes'])
+    df_output['contact_in'] = df_input['contact'].isin(['unknown', 'cellular', 'telephone'])
+    df_output['poutcome_in'] = df_input['poutcome'].isin(['unknown', 'failure', 'other', 'success'])
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_yes(df_input):
+    df_output = pd.DataFrame()
+    df_output['age_yes'] = (df_input['age'] >= 34) & (df_input['age'] <= 53)
+    df_output['job_yes'] = df_input['job'].isin(['admin.', 'services'])
+    df_output['marital_yes'] = df_input['marital'].isin(['married', 'single'])
+    df_output['education_yes'] = df_input['education'] == 'secondary'
+    df_output['default_yes'] = df_input['default'] == 'no'
+    df_output['balance_yes'] = (df_input['balance'] >= 1076) & (df_input['balance'] <= 2398)
+    df_output['housing_yes'] = df_input['housing'] == 'no'
+    df_output['loan_yes'] = df_input['loan'] == 'no'
+    df_output['contact_yes'] = df_input['contact'] == 'cellular'
+    df_output['poutcome_yes'] = df_input['poutcome'] == 'success'
+    return df_output
+
+---VERSION---
+
+def extracting_features_no(df_input):
+    df_output = pd.DataFrame()
+    df_output['age_range'] = (df_input['age'] >= 18) & (df_input['age'] <= 50)
+    df_output['job_in'] = df_input['job'].isin(['technician', 'entrepreneur', 'blue-collar', 'unknown', 'retired', 'admin.', 'services', 'self-employed', 'unemployed', 'housemaid', 'student'])
+    df_output['marital_in'] = df_input['marital'].isin(['single', 'divorced'])
+    df_output['education_in'] = df_input['education'].isin(['secondary', 'primary', 'unknown'])
+    df_output['default_yes'] = df_input['default'] == 'yes'
+    df_output['balance_range'] = (df_input['balance'] >= 0) & (df_input['balance'] <= 10000)
+    df_output['housing_no'] = df_input['housing'] == 'no'
+    df_output['loan_yes'] = df_input['loan'] == 'yes'
+    df_output['contact_telephone'] = df_input['contact'] == 'telephone'
+    df_output['day_range'] = (df_input['day'] >= 1) & (df_input['day'] <= 15)
+    df_output['month_in'] = df_input['month'].isin(['jun', 'jul', 'aug', 'oct', 'nov', 'dec', 'jan', 'fe', 'mar', 'apr', 'sep'])
+    df_output['duration_range'] = (df_input['duration'] >= 0) & (df_input['duration'] <= 100)
+    df_output['campaign_range'] = (df_input['campaign'] >= 1) & (df_input['campaign'] <= 5)
+    df_output['pdays_range'] = (df_input['pdays'] >= 0) & (df_input['pdays'] <= 100)
+    df_output['previous_range'] = (df_input['previous'] >= 0) & (df_input['previous'] <= 5)
+    df_output['poutcome_in'] = df_input['poutcome'].isin(['failure', 'other', 'unknown'])
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_yes(df_input):
+    df_output = pd.DataFrame()
+    df_output['age_range'] = (df_input['age'] >= 50) & (df_input['age'] <= 100)
+    df_output['job_management'] = df_input['job'] == 'management'
+    df_output['marital_married'] = df_input['marital'] == 'married'
+    df_output['education_tertiary'] = df_input['education'] == 'tertiary'
+    df_output['default_no'] = df_input['default'] == 'no'
+    df_output['balance_range'] = (df_input['balance'] >= 10000) & (df_input['balance'] <= 100000)
+    df_output['housing_yes'] = df_input['housing'] == 'yes'
+    df_output['loan_no'] = df_input['loan'] == 'no'
+    df_output['contact_cellular'] = df_input['contact'] == 'cellular'
+    df_output['day_range'] = (df_input['day'] >= 15) & (df_input['day'] <= 31)
+    df_output['month_may'] = df_input['month'] == 'may'
+    df_output['duration_range'] = (df_input['duration'] >= 100) & (df_input['duration'] <= 1000)
+    df_output['campaign_range'] = (df_input['campaign'] >= 5) & (df_input['campaign'] <= 10)
+    df_output['pdays_range'] = (df_input['pdays'] >= 100) & (df_input['pdays'] <= 1000)
+    df_output['previous_range'] = (df_input['previous'] >= 5) & (df_input['previous'] <= 10)
+    df_output['poutcome_success'] = df_input['poutcome'] == 'success'
+    return df_output
+
+---VERSION---
+
+def extracting_features_no(df_input):
+    df_output = pd.DataFrame()
+    df_output['age_range'] = (df_input['age'] >= 40) & (df_input['age'] <= 80)
+    df_output['job_in'] = df_input['job'].isin(['management', 'technician', 'entrepreneur', 'blue-collar', 'unknown', 'retired', 'admin.', 'services', 'self-employed', 'unemployed', 'housemaid', 'student'])
+    df_output['marital_in'] = df_input['marital'].isin(['married', 'single', 'divorced'])
+    df_output['education_in'] = df_input['education'].isin(['tertiary', 'secondary', 'unknown', 'primary'])
+    df_output['default_in'] = df_input['default'].isin(['no', 'yes'])
+    df_output['balance_range'] = (df_input['balance'] >= 0) & (df_input['balance'] <= 20000)
+    df_output['housing_in'] = df_input['housing'].isin(['yes', 'no'])
+    df_output['loan_in'] = df_input['loan'].isin(['no', 'yes'])
+    df_output['contact_in'] = df_input['contact'].isin(['unknown', 'cellular', 'telephone'])
+    df_output['poutcome_in'] = df_input['poutcome'].isin(['unknown', 'failure', 'other', 'success'])
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_yes(df_input):
+    df_output = pd.DataFrame()
+    df_output['age_range'] = (df_input['age'] >= 20) & (df_input['age'] <= 60)
+    df_output['job_in'] = df_input['job'].isin(['management', 'technician', 'entrepreneur', 'blue-collar', 'unknown', 'retired', 'admin.', 'services', 'self-employed', 'unemployed', 'housemaid', 'student'])
+    df_output['marital_in'] = df_input['marital'].isin(['married', 'single', 'divorced'])
+    df_output['education_in'] = df_input['education'].isin(['tertiary', 'secondary', 'unknown', 'primary'])
+    df_output['default_in'] = df_input['default'].isin(['no', 'yes'])
+    df_output['balance_range'] = (df_input['balance'] >= 0) & (df_input['balance'] <= 20000)
+    df_output['housing_in'] = df_input['housing'].isin(['yes', 'no'])
+    df_output['loan_in'] = df_input['loan'].isin(['no', 'yes'])
+    df_output['contact_in'] = df_input['contact'].isin(['unknown', 'cellular', 'telephone'])
+    df_output['poutcome_in'] = df_input['poutcome'].isin(['unknown', 'failure', 'other', 'success'])
+    return df_output
+
+---VERSION---
+
+def extracting_features_no(df_input):
+    df_output = pd.DataFrame()
+    df_output['loan_yes'] = (df_input['loan'] == 'yes').astype(int)
+    df_output['balance_0_1000'] = ((df_input['balance'] >= 0) & (df_input['balance'] <= 1000)).astype(int)
+    df_output['age_60_80'] = ((df_input['age'] >= 60) & (df_input['age'] <= 80)).astype(int)
+    df_output['job_retired_unemployed_housemaid_student'] = df_input['job'].isin(['retired', 'unemployed', 'housemaid', 'student']).astype(int)
+    df_output['education_primary_unknown'] = df_input['education'].isin(['primary', 'unknown']).astype(int)
+    df_output['marital_single'] = (df_input['marital'] == 'single').astype(int)
+    df_output['housing_no'] = (df_input['housing'] == 'no').astype(int)
+    df_output['poutcome_failure'] = (df_input['poutcome'] == 'failure').astype(int)
+    df_output['pdays_0_30'] = ((df_input['pdays'] >= 0) & (df_input['pdays'] <= 30)).astype(int)
+    df_output['previous_0_3'] = ((df_input['previous'] >= 0) & (df_input['previous'] <= 3)).astype(int)
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_yes(df_input):
+    df_output = pd.DataFrame()
+    df_output['housing_yes'] = (df_input['housing'] == 'yes').astype(int)
+    df_output['balance_range'] = ((df_input['balance'] >= 1000) & (df_input['balance'] <= 3000)).astype(int)
+    df_output['age_range'] = ((df_input['age'] >= 30) & (df_input['age'] <= 50)).astype(int)
+    df_output['job_in'] = (df_input['job'].isin(['management', 'services'])).astype(int)
+    df_output['education_tertiary'] = (df_input['education'] == 'tertiary').astype(int)
+    df_output['marital_married'] = (df_input['marital'] == 'married').astype(int)
+    df_output['loan_no'] = (df_input['loan'] == 'no').astype(int)
+    df_output['poutcome_success'] = (df_input['poutcome'] == 'success').astype(int)
+    df_output['pdays_range'] = ((df_input['pdays'] >= 100) & (df_input['pdays'] <= 200)).astype(int)
+    df_output['previous_range'] = ((df_input['previous'] >= 4) & (df_input['previous'] <= 7)).astype(int)
+    return df_output

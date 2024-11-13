@@ -1,0 +1,206 @@
+- Age: The higher the age, the more likely to have heart disease.
+- Sex: Male is more likely to have heart disease than female.
+- ChestPainType: Chest pain type ATA is more likely to have heart disease than other types.
+- RestingBP: The higher the resting blood pressure, the more likely to have heart disease.
+- Cholesterol: The higher the serum cholesterol, the more likely to have heart disease.
+- FastingBS: Fasting blood sugar > 120 mg/dl is more likely to have heart disease.
+- RestingECG: Resting electrocardiogram results ST or LVH is more likely to have heart disease than Normal.
+- MaxHR: The lower the maximum heart rate achieved, the more likely to have heart disease.
+- ExerciseAngina: Exercise-induced angina is more likely to have heart disease.
+- Oldpeak: The higher the oldpeak, the more likely to have heart disease.
+- ST_Slope: ST_Slope Down is more likely to have heart disease than other types.
+
+Step 2. Conditions for each answer class:
+10 different conditions for class "no":
+- Age is less than 50
+- Sex is F
+- ChestPainType is not ATA
+- RestingBP is less than 140
+- Cholesterol is less than 200
+- FastingBS is 0
+- RestingECG is Normal
+- MaxHR is greater than 120
+- ExerciseAngina is N
+- Oldpeak is less than 1.0
+- ST_Slope is not Down
+
+10 different conditions for class "yes":
+- Age is greater than or equal to 60
+- Sex is M
+- ChestPainType is ATA
+- RestingBP is greater than or equal to 160
+- Cholesterol is greater than or equal to 220
+- FastingBS is 1
+- RestingECG is ST or LVH
+- MaxHR is less than or equal to 100
+- ExerciseAngina is Y
+- Oldpeak is greater than or equal to 1.5
+- ST_Slope is Down
+
+---DIVIDER---
+
+- Age: The older the patient, the more likely they are to have heart disease.
+- Sex: Men are more likely to have heart disease than women.
+- ChestPainType: Patients with chest pain are more likely to have heart disease.
+- RestingBP: Patients with high blood pressure are more likely to have heart disease.
+- Cholesterol: Patients with high cholesterol are more likely to have heart disease.
+- FastingBS: Patients with diabetes are more likely to have heart disease.
+- RestingECG: Patients with abnormal resting ECG are more likely to have heart disease.
+- MaxHR: Patients with low maximum heart rate are more likely to have heart disease.
+- ExerciseAngina: Patients with exercise-induced angina are more likely to have heart disease.
+- Oldpeak: Patients with ST depression are more likely to have heart disease.
+- ST_Slope: Patients with downsloping ST segment are more likely to have heart disease.
+
+Step 2. 10 different conditions per answer class:
+
+10 different conditions for class "no":
+- Age < 50
+- Sex is F
+- ChestPainType is NAP
+- RestingBP < 120
+- Cholesterol < 200
+- FastingBS is 0
+- RestingECG is Normal
+- MaxHR > 140
+- ExerciseAngina is N
+- Oldpeak = 0.0
+- ST_Slope is Up
+
+10 different conditions for class "yes":
+- Age >= 60
+- Sex is M
+- ChestPainType is ATA
+- RestingBP >= 140
+- Cholesterol >= 240
+- FastingBS is 1
+- RestingECG is ST
+- MaxHR < 120
+- ExerciseAngina is Y
+- Oldpeak > 0.0
+- ST_Slope is Down
+
+---DIVIDER---
+
+- Age: The older the patient, the more likely they are to have heart disease.
+- Sex: Men are more likely to have heart disease than women.
+- ChestPainType: Patients with chest pain are more likely to have heart disease.
+- RestingBP: High resting blood pressure is a risk factor for heart disease.
+- Cholesterol: High cholesterol is a risk factor for heart disease.
+- FastingBS: High fasting blood sugar is a risk factor for heart disease.
+- RestingECG: Abnormal resting electrocardiogram results are a sign of heart disease.
+- MaxHR: Low maximum heart rate achieved is a risk factor for heart disease.
+- ExerciseAngina: Exercise-induced angina is a sign of heart disease.
+- Oldpeak: High oldpeak is a sign of heart disease.
+- ST_Slope: Downward sloping ST segment is a sign of heart disease.
+
+Step 2. 10 different conditions per answer class:
+
+**10 different conditions for class "no":**
+- Age is < 50
+- Sex is F
+- ChestPainType is ATA
+- RestingBP is < 120
+- Cholesterol is < 200
+- FastingBS is 0
+- RestingECG is Normal
+- MaxHR is > 140
+- ExerciseAngina is N
+- Oldpeak is < 0.5
+- ST_Slope is Up
+
+**10 different conditions for class "yes":**
+- Age is > 60
+- Sex is M
+- ChestPainType is ASY
+- RestingBP is > 140
+- Cholesterol is > 240
+- FastingBS is 1
+- RestingECG is LVH
+- MaxHR is < 120
+- ExerciseAngina is Y
+- Oldpeak is > 1.0
+- ST_Slope is Down
+
+---DIVIDER---
+
+- Age: Older patients are more likely to have heart disease.
+- Sex: Men are more likely to have heart disease than women.
+- ChestPainType: Patients with atypical angina (ATA) or non-anginal pain (NAP) are less likely to have heart disease than patients with typical angina (TA) or asymptomatic (ASY).
+- RestingBP: Higher resting blood pressure is associated with an increased risk of heart disease.
+- Cholesterol: Higher serum cholesterol is associated with an increased risk of heart disease.
+- FastingBS: Patients with fasting blood sugar > 120 mg/dl are more likely to have heart disease.
+- RestingECG: Patients with abnormal resting electrocardiogram results (ST or LVH) are more likely to have heart disease.
+- MaxHR: Lower maximum heart rate achieved is associated with an increased risk of heart disease.
+- ExerciseAngina: Patients with exercise-induced angina are more likely to have heart disease.
+- Oldpeak: Higher oldpeak is associated with an increased risk of heart disease.
+- ST_Slope: Patients with downsloping ST segment are more likely to have heart disease.
+
+Step 2. 10 different conditions per answer class:
+
+10 different conditions for class "no":
+- Age <= 50
+- Sex is F
+- ChestPainType is ATA or NAP
+- RestingBP <= 120
+- Cholesterol <= 200
+- FastingBS is 0
+- RestingECG is Normal
+- MaxHR >= 140
+- ExerciseAngina is N
+- Oldpeak <= 0.0
+- ST_Slope is Up
+
+10 different conditions for class "yes":
+- Age >= 60
+- Sex is M
+- ChestPainType is TA or ASY
+- RestingBP >= 140
+- Cholesterol >= 240
+- FastingBS is 1
+- RestingECG is ST or LVH
+- MaxHR <= 120
+- ExerciseAngina is Y
+- Oldpeak >= 1.0
+- ST_Slope is Down
+
+---DIVIDER---
+
+- Age: The older the patient, the more likely they are to have heart disease.
+- Sex: Men are more likely to have heart disease than women.
+- ChestPainType: Patients with atypical angina (ATA) are less likely to have heart disease than patients with other types of chest pain.
+- RestingBP: Patients with high resting blood pressure are more likely to have heart disease.
+- Cholesterol: Patients with high cholesterol are more likely to have heart disease.
+- FastingBS: Patients with high fasting blood sugar are more likely to have heart disease.
+- RestingECG: Patients with abnormal resting electrocardiogram results are more likely to have heart disease.
+- MaxHR: Patients with low maximum heart rate achieved are more likely to have heart disease.
+- ExerciseAngina: Patients with exercise-induced angina are more likely to have heart disease.
+- Oldpeak: Patients with high oldpeak are more likely to have heart disease.
+- ST_Slope: Patients with downsloping ST segment are more likely to have heart disease.
+
+Step 2. Conditions for each answer class:
+
+10 different conditions for class "no":
+- Age is less than 60
+- Sex is F
+- ChestPainType is ATA
+- RestingBP is less than 130
+- Cholesterol is less than 200
+- FastingBS is 0
+- RestingECG is Normal
+- MaxHR is greater than 140
+- ExerciseAngina is N
+- Oldpeak is less than 1.0
+- ST_Slope is Up
+
+10 different conditions for class "yes":
+- Age is greater than 60
+- Sex is M
+- ChestPainType is ASY
+- RestingBP is greater than 140
+- Cholesterol is greater than 200
+- FastingBS is 1
+- RestingECG is ST or LVH
+- MaxHR is less than 120
+- ExerciseAngina is Y
+- Oldpeak is greater than 1.0
+- ST_Slope is Flat or Down

@@ -1,0 +1,199 @@
+- Pregnancies: The more pregnancies, the higher the risk of diabetes.
+- Glucose: The higher the glucose, the higher the risk of diabetes.
+- BloodPressure: The higher the blood pressure, the higher the risk of diabetes.
+- SkinThickness: The thicker the skin, the higher the risk of diabetes.
+- Insulin: The higher the insulin, the higher the risk of diabetes.
+- BMI: The higher the BMI, the higher the risk of diabetes.
+- DiabetesPedigreeFunction: The higher the diabetes pedigree function, the higher the risk of diabetes.
+- Age: The older the age, the higher the risk of diabetes.
+
+Step 2. Conditions for each answer class:
+
+10 different conditions for class "no":
+- Glucose < 120
+- BloodPressure < 80
+- SkinThickness < 15
+- Insulin < 100
+- BMI < 25
+- DiabetesPedigreeFunction < 0.5
+- Age < 40
+- Pregnancies < 5
+- Glucose is within range of [90, 110]
+- BloodPressure is within range of [60, 80]
+
+10 different conditions for class "yes":
+- Glucose >= 120
+- BloodPressure >= 80
+- SkinThickness >= 15
+- Insulin >= 100
+- BMI >= 25
+- DiabetesPedigreeFunction >= 0.5
+- Age >= 40
+- Pregnancies >= 5
+- Glucose is within range of [120, 150]
+- BloodPressure is within range of [80, 90]
+
+---DIVIDER---
+
+- Pregnancies: The more pregnancies, the higher the risk of diabetes.
+- Glucose: The higher the glucose level, the higher the risk of diabetes.
+- BloodPressure: The higher the blood pressure, the higher the risk of diabetes.
+- SkinThickness: The thicker the skin, the higher the risk of diabetes.
+- Insulin: The higher the insulin level, the higher the risk of diabetes.
+- BMI: The higher the BMI, the higher the risk of diabetes.
+- DiabetesPedigreeFunction: The higher the diabetes pedigree function, the higher the risk of diabetes.
+- Age: The older the age, the higher the risk of diabetes.
+
+Step 2. Conditions for each answer class:
+
+10 different conditions for class "no":
+- Glucose <= 120
+- BloodPressure <= 80
+- Insulin <= 100
+- BMI <= 25
+- DiabetesPedigreeFunction <= 0.3
+- Age <= 40
+- Pregnancies is 1
+- SkinThickness is 0
+- Glucose is within range of 90, 110
+- BloodPressure is within range of 70, 80
+
+10 different conditions for class "yes":
+- Glucose > 120
+- BloodPressure > 80
+- Insulin > 100
+- BMI > 25
+- DiabetesPedigreeFunction > 0.3
+- Age > 40
+- Pregnancies > 2
+- SkinThickness > 10
+- Glucose is within range of 130, 150
+- BloodPressure is within range of 90, 100
+
+---DIVIDER---
+
+- Pregnancies: The more pregnancies a woman has, the higher her risk of developing diabetes.
+- Glucose: High glucose levels are a sign of diabetes.
+- BloodPressure: High blood pressure is a risk factor for diabetes.
+- SkinThickness: Increased skin thickness is a sign of insulin resistance, which is a precursor to diabetes.
+- Insulin: High insulin levels are a sign of insulin resistance, which is a precursor to diabetes.
+- BMI: Obesity is a major risk factor for diabetes.
+- DiabetesPedigreeFunction: A high diabetes pedigree function indicates a family history of diabetes, which increases the risk of developing the disease.
+- Age: Age is a risk factor for diabetes.
+
+Step 2. 
+10 different conditions for class "no":
+- Glucose <= 123
+- BloodPressure >= 80
+- SkinThickness <= 12
+- Insulin <= 176
+- BMI <= 32.0
+- DiabetesPedigreeFunction <= 0.443
+- Age <= 34
+- Pregnancies <= 4
+- Glucose <= 117
+- BloodPressure >= 62
+
+10 different conditions for class "yes":
+- Glucose >= 156
+- BloodPressure <= 86
+- SkinThickness >= 15
+- Insulin >= 0
+- BMI >= 29.7
+- DiabetesPedigreeFunction >= 0.38
+- Age >= 53
+- Pregnancies >= 9
+- Glucose >= 123
+- BloodPressure <= 80
+
+---DIVIDER---
+
+- Pregnancies: No clear relationship.
+- Glucose: Higher glucose level is more likely to have diabetes.
+- BloodPressure: No clear relationship.
+- SkinThickness: No clear relationship.
+- Insulin: Higher insulin level is more likely to have diabetes.
+- BMI: Higher BMI is more likely to have diabetes.
+- DiabetesPedigreeFunction: Higher DiabetesPedigreeFunction is more likely to have diabetes.
+- Age: Older age is more likely to have diabetes.
+
+Step 2. 
+10 different conditions for class "no":
+- Glucose < 120
+- Insulin < 100
+- BMI < 25
+- DiabetesPedigreeFunction < 0.3
+- Age < 40
+- Glucose < 115
+- Insulin < 50
+- BMI < 23
+- DiabetesPedigreeFunction < 0.2
+- Age < 35
+- Glucose < 110
+- Insulin < 20
+- BMI < 21
+- DiabetesPedigreeFunction < 0.1
+- Age < 30
+- Glucose < 105
+- Insulin < 10
+- BMI < 19
+- DiabetesPedigreeFunction < 0.05
+- Age < 25
+
+10 different conditions for class "yes":
+- Glucose >= 120
+- Insulin >= 100
+- BMI >= 25
+- DiabetesPedigreeFunction >= 0.3
+- Age >= 40
+- Glucose >= 115
+- Insulin >= 50
+- BMI >= 23
+- DiabetesPedigreeFunction >= 0.2
+- Age >= 35
+- Glucose >= 110
+- Insulin >= 20
+- BMI >= 21
+- DiabetesPedigreeFunction >= 0.1
+- Age >= 30
+- Glucose >= 105
+- Insulin >= 10
+- BMI >= 19
+- DiabetesPedigreeFunction >= 0.05
+- Age >= 25
+
+---DIVIDER---
+
+- Pregnancies: No clear relationship.
+- Glucose: Higher glucose level is more likely to have diabetes.
+- BloodPressure: No clear relationship.
+- SkinThickness: No clear relationship.
+- Insulin: Higher insulin level is more likely to have diabetes.
+- BMI: Higher BMI is more likely to have diabetes.
+- DiabetesPedigreeFunction: Higher DiabetesPedigreeFunction is more likely to have diabetes.
+- Age: Older age is more likely to have diabetes.
+
+Step 2. 
+10 different conditions for class "no":
+- Glucose < 120
+- Insulin < 100
+- BMI < 25
+- DiabetesPedigreeFunction < 0.3
+- Age < 40
+- Pregnancies is in [0, 1, 2]
+- BloodPressure is in [100, 120]
+- SkinThickness is in [0, 10]
+- Glucose is within range of [90, 110]
+- BMI is within range of [20, 25]
+
+10 different conditions for class "yes":
+- Glucose >= 120
+- Insulin >= 100
+- BMI >= 25
+- DiabetesPedigreeFunction >= 0.3
+- Age >= 40
+- Pregnancies is in [4, 9]
+- BloodPressure is in [60, 80]
+- SkinThickness is in [12, 15]
+- Glucose is within range of [110, 160]
+- BMI is within range of [25, 35]

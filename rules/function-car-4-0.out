@@ -1,0 +1,312 @@
+def extracting_features_acceptable(df_input):
+    df_output = pd.DataFrame()
+    df_output['buying_low'] = (df_input['buying'] == 'low').astype(int)
+    df_output['maint_low'] = (df_input['maint'] == 'low').astype(int)
+    df_output['doors_3'] = (df_input['doors'] == '3').astype(int)
+    df_output['persons_more'] = (df_input['persons'] == 'more').astype(int)
+    df_output['lug_boot_med'] = (df_input['lug_boot'] == 'med').astype(int)
+    df_output['safety_med'] = (df_input['safety'] == 'med').astype(int)
+    df_output['buying_low_maint_medium_doors_4_persons_more_lug_boot_small_safety_high'] = ((df_input['buying'] == 'low') & (df_input['maint'] == 'medium') & (df_input['doors'] == '4') & (df_input['persons'] == 'more') & (df_input['lug_boot'] == 'small') & (df_input['safety'] == 'high')).astype(int)
+    df_output['buying_low_maint_medium_doors_5more_persons_4_lug_boot_big_safety_med'] = ((df_input['buying'] == 'low') & (df_input['maint'] == 'medium') & (df_input['doors'] == '5more') & (df_input['persons'] == '4') & (df_input['lug_boot'] == 'big') & (df_input['safety'] == 'med')).astype(int)
+    df_output['buying_low_maint_high_doors_4_persons_more_lug_boot_big_safety_med'] = ((df_input['buying'] == 'low') & (df_input['maint'] == 'high') & (df_input['doors'] == '4') & (df_input['persons'] == 'more') & (df_input['lug_boot'] == 'big') & (df_input['safety'] == 'med')).astype(int)
+    df_output['buying_medium_maint_low_doors_3_persons_more_lug_boot_big_safety_med'] = ((df_input['buying'] == 'medium') & (df_input['maint'] == 'low') & (df_input['doors'] == '3') & (df_input['persons'] == 'more') & (df_input['lug_boot'] == 'big') & (df_input['safety'] == 'med')).astype(int)
+    df_output['buying_medium_maint_low_doors_4_persons_more_lug_boot_med_safety_high'] = ((df_input['buying'] == 'medium') & (df_input['maint'] == 'low') & (df_input['doors'] == '4') & (df_input['persons'] == 'more') & (df_input['lug_boot'] == 'med') & (df_input['safety'] == 'high')).astype(int)
+    df_output['buying_medium_maint_medium_doors_4_persons_4_lug_boot_big_safety_med'] = ((df_input['buying'] == 'medium') & (df_input['maint'] == 'medium') & (df_input['doors'] == '4') & (df_input['persons'] == '4') & (df_input['lug_boot'] == 'big') & (df_input['safety'] == 'med')).astype(int)
+    df_output['buying_medium_maint_high_doors_4_persons_more_lug_boot_med_safety_med'] = ((df_input['buying'] == 'medium') & (df_input['maint'] == 'high') & (df_input['doors'] == '4') & (df_input['persons'] == 'more') & (df_input['lug_boot'] == 'med') & (df_input['safety'] == 'med')).astype(int)
+    df_output['buying_high_maint_low_doors_3_persons_more_lug_boot_big_safety_med'] = ((df_input['buying'] == 'high') & (df_input['maint'] == 'low') & (df_input['doors'] == '3') & (df_input['persons'] == 'more') & (df_input['lug_boot'] == 'big') & (df_input['safety'] == 'med')).astype(int)
+    df_output['buying_high_maint_low_doors_4_persons_more_lug_boot_med_safety_high'] = ((df_input['buying'] == 'high') & (df_input['maint'] == 'low') & (df_input['doors'] == '4') & (df_input['persons'] == 'more') & (df_input['lug_boot'] == 'med') & (df_input['safety'] == 'high')).astype(int)
+    return df_output
+
+</end>
+
+---DIVIDER---
+
+def extracting_features_good(df_input):
+    df_output = pd.DataFrame()
+    df_output['buying_low'] = (df_input['buying'] == 'low').astype(int)
+    df_output['maint_low'] = (df_input['maint'] == 'low').astype(int)
+    df_output['doors_4'] = (df_input['doors'] == '4').astype(int)
+    df_output['persons_more'] = (df_input['persons'] == 'more').astype(int)
+    df_output['lug_boot_small'] = (df_input['lug_boot'] == 'small').astype(int)
+    df_output['safety_high'] = (df_input['safety'] == 'high').astype(int)
+    df_output['buying_low_maint_low_doors_5more_persons_more_lug_boot_med_safety_high'] = ((df_input['buying'] == 'low') & (df_input['maint'] == 'low') & (df_input['doors'] == '5more') & (df_input['persons'] == 'more') & (df_input['lug_boot'] == 'med') & (df_input['safety'] == 'high')).astype(int)
+    df_output['buying_low_maint_medium_doors_4_persons_more_lug_boot_big_safety_high'] = ((df_input['buying'] == 'low') & (df_input['maint'] == 'medium') & (df_input['doors'] == '4') & (df_input['persons'] == 'more') & (df_input['lug_boot'] == 'big') & (df_input['safety'] == 'high')).astype(int)
+    df_output['buying_low_maint_high_doors_4_persons_more_lug_boot_big_safety_med'] = ((df_input['buying'] == 'low') & (df_input['maint'] == 'high') & (df_input['doors'] == '4') & (df_input['persons'] == 'more') & (df_input['lug_boot'] == 'big') & (df_input['safety'] == 'med')).astype(int)
+    df_output['buying_medium_maint_low_doors_4_persons_more_lug_boot_big_safety_high'] = ((df_input['buying'] == 'medium') & (df_input['maint'] == 'low') & (df_input['doors'] == '4') & (df_input['persons'] == 'more') & (df_input['lug_boot'] == 'big') & (df_input['safety'] == 'high')).astype(int)
+    df_output['buying_medium_maint_low_doors_5more_persons_more_lug_boot_big_safety_high'] = ((df_input['buying'] == 'medium') & (df_input['maint'] == 'low') & (df_input['doors'] == '5more') & (df_input['persons'] == 'more') & (df_input['lug_boot'] == 'big') & (df_input['safety'] == 'high')).astype(int)
+    df_output['buying_medium_maint_medium_doors_4_persons_more_lug_boot_big_safety_high'] = ((df_input['buying'] == 'medium') & (df_input['maint'] == 'medium') & (df_input['doors'] == '4') & (df_input['persons'] == 'more') & (df_input['lug_boot'] == 'big') & (df_input['safety'] == 'high')).astype(int)
+    df_output['buying_medium_maint_high_doors_4_persons_more_lug_boot_big_safety_med'] = ((df_input['buying'] == 'medium') & (df_input['maint'] == 'high') & (df_input['doors'] == '4') & (df_input['persons'] == 'more') & (df_input['lug_boot'] == 'big') & (df_input['safety'] == 'med')).astype(int)
+    df_output['buying_high_maint_low_doors_4_persons_more_lug_boot_big_safety_high'] = ((df_input['buying'] == 'high') & (df_input['maint'] == 'low') & (df_input['doors'] == '4') & (df_input['persons'] == 'more') & (df_input['lug_boot'] == 'big') & (df_input['safety'] == 'high')).astype(int)
+    df_output['buying_high_maint_medium_doors_4_persons_more_lug_boot_big_safety_high'] = ((df_input['buying'] == 'high') & (df_input['maint'] == 'medium') & (df_input['doors'] == '4') & (df_input['persons'] == 'more') & (df_input['lug_boot'] == 'big') & (df_input['safety'] == 'high')).astype(int)
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_unacceptable(df_input):
+    df_output = pd.DataFrame()
+    df_output['buying_very_high'] = (df_input['buying'] == 'very high').astype(int)
+    df_output['maint_very_high'] = (df_input['maint'] == 'very high').astype(int)
+    df_output['doors_2'] = (df_input['doors'] == '2').astype(int)
+    df_output['persons_2'] = (df_input['persons'] == '2').astype(int)
+    df_output['lug_boot_small'] = (df_input['lug_boot'] == 'small').astype(int)
+    df_output['safety_low'] = (df_input['safety'] == 'low').astype(int)
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_very_good(df_input):
+    df_output = pd.DataFrame()
+    df_output['buying_low'] = (df_input['buying'] == 'low').astype(int)
+    df_output['maint_low'] = (df_input['maint'] == 'low').astype(int)
+    df_output['doors_5more'] = (df_input['doors'] == '5more').astype(int)
+    df_output['persons_more'] = (df_input['persons'] == 'more').astype(int)
+    df_output['lug_boot_big'] = (df_input['lug_boot'] == 'big').astype(int)
+    df_output['safety_high'] = (df_input['safety'] == 'high').astype(int)
+    df_output['buying_medium'] = (df_input['buying'] == 'medium').astype(int)
+    df_output['maint_low_2'] = (df_input['maint'] == 'low').astype(int)
+    df_output['doors_5more_2'] = (df_input['doors'] == '5more').astype(int)
+    df_output['persons_more_2'] = (df_input['persons'] == 'more').astype(int)
+    df_output['lug_boot_big_2'] = (df_input['lug_boot'] == 'big').astype(int)
+    df_output['safety_high_2'] = (df_input['safety'] == 'high').astype(int)
+    df_output['buying_high'] = (df_input['buying'] == 'high').astype(int)
+    df_output['maint_low_3'] = (df_input['maint'] == 'low').astype(int)
+    df_output['doors_5more_3'] = (df_input['doors'] == '5more').astype(int)
+    df_output['persons_more_3'] = (df_input['persons'] == 'more').astype(int)
+    df_output['lug_boot_big_3'] = (df_input['lug_boot'] == 'big').astype(int)
+    df_output['safety_high_3'] = (df_input['safety'] == 'high').astype(int)
+    df_output['buying_low_4'] = (df_input['buying'] == 'low').astype(int)
+    df_output['maint_low_4'] = (df_input['maint'] == 'low').astype(int)
+    df_output['doors_4'] = (df_input['doors'] == '4').astype(int)
+    df_output['persons_more_4'] = (df_input['persons'] == 'more').astype(int)
+    df_output['lug_boot_big_4'] = (df_input['lug_boot'] == 'big').astype(int)
+    df_output['safety_high_4'] = (df_input['safety'] == 'high').astype(int)
+    df_output['buying_medium_5'] = (df_input['buying'] == 'medium').astype(int)
+    df_output['maint_low_5'] = (df_input['maint'] == 'low').astype(int)
+    df_output['doors_4_2'] = (df_input['doors'] == '4').astype(int)
+    df_output['persons_more_5'] = (df_input['persons'] == 'more').astype(int)
+    df_output['lug_boot_big_5'] = (df_input['lug_boot'] == 'big').astype(int)
+    df_output['safety_high_5'] = (df_input['safety'] == 'high').astype(int)
+    df_output['buying_high_6'] = (df_input['buying'] == 'high').astype(int)
+    df_output['maint_low_6'] = (df_input['maint'] == 'low').astype(int)
+    df_output['doors_4_3'] = (df_input['doors'] == '4').astype(int)
+    df_output['persons_more_6'] = (df_input['persons'] == 'more').astype(int)
+    df_output['lug_boot_big_6'] = (df_input['lug_boot'] == 'big').astype(int)
+    df_output['safety_high_6'] = (df_input['safety'] == 'high').astype(int)
+    df_output['buying_low_7'] = (df_input['buying'] == 'low').astype(int)
+    df_output['maint_medium'] = (df_input['maint'] == 'medium').astype(int)
+    df_output['doors_5more_4'] = (df_input['doors'] == '5more').astype(int)
+    df_output['persons_more_7'] = (df_input['persons'] == 'more').astype(int)
+    df_output['lug_boot_big_7'] = (df_input['lug_boot'] == 'big').astype(int)
+    df_output['safety_high_7'] = (df_input['safety'] == 'high').astype(int)
+    df_output['buying_medium_8'] = (df_input['buying'] == 'medium').astype(int)
+    df_output['maint_medium_2'] = (df_input['maint'] == 'medium').astype(int)
+    df_output['doors_5more_5'] = (df_input['doors'] == '5more').astype(int)
+    df_output['persons_more_8'] = (df_input['persons'] == 'more').astype(int)
+    df_output['lug_boot_big_8'] = (df_input['lug_boot'] == 'big').astype(int)
+    df_output['safety_high_8'] = (df_input['safety'] == 'high').astype(int)
+    df_output['buying_high_9'] = (df_input['buying'] == 'high').astype(int)
+    df_output['maint_medium_3'] = (df_input['maint'] == 'medium').astype(int)
+    df_output['doors_5more_6'] = (df_input['doors'] == '5more').astype(int)
+    df
+
+---VERSION---
+
+def extracting_features_acceptable(df_input):
+    df_output = pd.DataFrame()
+    df_output['buying_low'] = (df_input['buying'] == 'low').astype(int)
+    df_output['maint_med_low'] = (df_input['maint'].isin(['med', 'low'])).astype(int)
+    df_output['doors_3_4'] = (df_input['doors'].isin(['3', '4'])).astype(int)
+    df_output['persons_more'] = (df_input['persons'] == 'more').astype(int)
+    df_output['lug_boot_med_big'] = (df_input['lug_boot'].isin(['med', 'big'])).astype(int)
+    df_output['safety_med_high'] = (df_input['safety'].isin(['med', 'high'])).astype(int)
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_good(df_input):
+    df_output = pd.DataFrame()
+    df_output['buying_low'] = (df_input['buying'] == 'low').astype(int)
+    df_output['maint_low'] = (df_input['maint'] == 'low').astype(int)
+    df_output['doors_4_5more'] = (df_input['doors'].isin(['4', '5more'])).astype(int)
+    df_output['persons_more'] = (df_input['persons'] == 'more').astype(int)
+    df_output['lug_boot_big'] = (df_input['lug_boot'] == 'big').astype(int)
+    df_output['safety_high'] = (df_input['safety'] == 'high').astype(int)
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_unacceptable(df_input):
+    df_output = pd.DataFrame()
+    df_output['buying_very_high'] = (df_input['buying'] == 'very high').astype(int)
+    df_output['maint_very_high'] = (df_input['maint'] == 'very high').astype(int)
+    df_output['doors_2'] = (df_input['doors'] == '2').astype(int)
+    df_output['persons_2'] = (df_input['persons'] == '2').astype(int)
+    df_output['lug_boot_small'] = (df_input['lug_boot'] == 'small').astype(int)
+    df_output['safety_low'] = (df_input['safety'] == 'low').astype(int)
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_very_good(df_input):
+    df_output = pd.DataFrame()
+    df_output['buying_low_or_medium'] = (df_input['buying'] == 'low') | (df_input['buying'] == 'medium')
+    df_output['maint_low'] = df_input['maint'] == 'low'
+    df_output['doors_4_or_5more'] = (df_input['doors'] == '4') | (df_input['doors'] == '5more')
+    df_output['persons_more'] = df_input['persons'] == 'more'
+    df_output['lug_boot_big'] = df_input['lug_boot'] == 'big'
+    df_output['safety_high'] = df_input['safety'] == 'high'
+    return df_output
+
+---VERSION---
+
+def extracting_features_acceptable(df_input):
+    df_output = pd.DataFrame()
+    df_output['buying_low'] = (df_input['buying'] == 'low').astype(int)
+    df_output['maint_med_high'] = (df_input['maint'].isin(['med', 'high'])).astype(int)
+    df_output['doors_2_3'] = (df_input['doors'].isin(['2', '3'])).astype(int)
+    df_output['persons_2_4'] = (df_input['persons'].isin(['2', '4'])).astype(int)
+    df_output['lug_boot_small_med'] = (df_input['lug_boot'].isin(['small', 'med'])).astype(int)
+    df_output['safety_med'] = (df_input['safety'] == 'med').astype(int)
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_good(df_input):
+    df_output = pd.DataFrame()
+    df_output['buying_low'] = (df_input['buying'] == 'low').astype(int)
+    df_output['maint_low'] = (df_input['maint'] == 'low').astype(int)
+    df_output['doors_4_5more'] = (df_input['doors'].isin(['4', '5more'])).astype(int)
+    df_output['persons_more'] = (df_input['persons'] == 'more').astype(int)
+    df_output['lug_boot_big'] = (df_input['lug_boot'] == 'big').astype(int)
+    df_output['safety_high'] = (df_input['safety'] == 'high').astype(int)
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_unacceptable(df_input):
+    df_output = pd.DataFrame()
+    df_output['buying_very_high'] = (df_input['buying'] == 'very high').astype(int)
+    df_output['maint_very_high'] = (df_input['maint'] == 'very high').astype(int)
+    df_output['doors_2'] = (df_input['doors'] == '2').astype(int)
+    df_output['persons_2'] = (df_input['persons'] == '2').astype(int)
+    df_output['lug_boot_small'] = (df_input['lug_boot'] == 'small').astype(int)
+    df_output['safety_low'] = (df_input['safety'] == 'low').astype(int)
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_very_good(df_input):
+    df_output = pd.DataFrame()
+    df_output['buying_low_or_medium'] = (df_input['buying'] == 'low') | (df_input['buying'] == 'medium')
+    df_output['maint_low'] = df_input['maint'] == 'low'
+    df_output['doors_4_or_5more'] = (df_input['doors'] == '4') | (df_input['doors'] == '5more')
+    df_output['persons_more'] = df_input['persons'] == 'more'
+    df_output['lug_boot_big'] = df_input['lug_boot'] == 'big'
+    df_output['safety_high'] = df_input['safety'] == 'high'
+    return df_output
+
+---VERSION---
+
+def extracting_features_acceptable(df_input):
+    df_output = pd.DataFrame()
+    df_output['buying_acceptable'] = (df_input['buying'].isin(['low', 'very low'])).astype(int)
+    df_output['maint_acceptable'] = (df_input['maint'].isin(['low', 'very low'])).astype(int)
+    df_output['doors_acceptable'] = (df_input['doors'].isin(['3', '4', '5more'])).astype(int)
+    df_output['persons_acceptable'] = (df_input['persons'].isin(['more'])).astype(int)
+    df_output['lug_boot_acceptable'] = (df_input['lug_boot'].isin(['big', 'med'])).astype(int)
+    df_output['safety_acceptable'] = (df_input['safety'].isin(['med', 'high'])).astype(int)
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_good(df_input):
+    df_output = pd.DataFrame()
+    df_output['buying_good'] = (df_input['buying'].isin(['low', 'very low'])).astype(int)
+    df_output['maint_good'] = (df_input['maint'].isin(['low', 'very low', 'med'])).astype(int)
+    df_output['doors_good'] = (df_input['doors'].isin(['4', '5more'])).astype(int)
+    df_output['persons_good'] = (df_input['persons'].isin(['more'])).astype(int)
+    df_output['lug_boot_good'] = (df_input['lug_boot'].isin(['big', 'med'])).astype(int)
+    df_output['safety_good'] = (df_input['safety'].isin(['high'])).astype(int)
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_unacceptable(df_input):
+    df_output = pd.DataFrame()
+    df_output['buying_unacceptable'] = (df_input['buying'].isin(['high', 'very high'])).astype(int)
+    df_output['maint_unacceptable'] = (df_input['maint'].isin(['high', 'very high'])).astype(int)
+    df_output['doors_unacceptable'] = (df_input['doors'].isin(['2'])).astype(int)
+    df_output['persons_unacceptable'] = (df_input['persons'].isin(['2'])).astype(int)
+    df_output['lug_boot_unacceptable'] = (df_input['lug_boot'].isin(['small'])).astype(int)
+    df_output['safety_unacceptable'] = (df_input['safety'].isin(['low'])).astype(int)
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_very_good(df_input):
+    df_output = pd.DataFrame()
+    df_output['buying_very_good'] = (df_input['buying'].isin(['low', 'very low'])).astype(int)
+    df_output['maint_very_good'] = (df_input['maint'].isin(['low', 'very low'])).astype(int)
+    df_output['doors_very_good'] = (df_input['doors'].isin(['4', '5more'])).astype(int)
+    df_output['persons_very_good'] = (df_input['persons'].isin(['more'])).astype(int)
+    df_output['lug_boot_very_good'] = (df_input['lug_boot'].isin(['big'])).astype(int)
+    df_output['safety_very_good'] = (df_input['safety'].isin(['high'])).astype(int)
+    return df_output
+
+---VERSION---
+
+def extracting_features_acceptable(df_input):
+    df_output = pd.DataFrame()
+    df_output['buying_low'] = (df_input['buying'] == 'low').astype(int)
+    df_output['maint_low'] = (df_input['maint'] == 'low').astype(int)
+    df_output['doors_3'] = (df_input['doors'] == '3').astype(int)
+    df_output['persons_more'] = (df_input['persons'] == 'more').astype(int)
+    df_output['lug_boot_big'] = (df_input['lug_boot'] == 'big').astype(int)
+    df_output['safety_med'] = (df_input['safety'] == 'med').astype(int)
+    df_output['buying_medium'] = (df_input['buying'] == 'medium').astype(int)
+    df_output['maint_medium'] = (df_input['maint'] == 'medium').astype(int)
+    df_output['doors_4'] = (df_input['doors'] == '4').astype(int)
+    df_output['persons_more_2'] = (df_input['persons'] == 'more').astype(int)
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_good(df_input):
+    df_output = pd.DataFrame()
+    df_output['buying_low'] = (df_input['buying'] == 'low').astype(int)
+    df_output['maint_low'] = (df_input['maint'] == 'low').astype(int)
+    df_output['doors_4'] = (df_input['doors'] == '4').astype(int)
+    df_output['persons_more'] = (df_input['persons'] == 'more').astype(int)
+    df_output['lug_boot_small'] = (df_input['lug_boot'] == 'small').astype(int)
+    df_output['safety_high'] = (df_input['safety'] == 'high').astype(int)
+    df_output['buying_low_maint_medium_doors_5more_persons_more'] = ((df_input['buying'] == 'low') & (df_input['maint'] == 'medium') & (df_input['doors'] == '5more') & (df_input['persons'] == 'more')).astype(int)
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_unacceptable(df_input):
+    df_output = pd.DataFrame()
+    df_output['buying_high'] = (df_input['buying'] == 'high').astype(int)
+    df_output['maint_very_high'] = (df_input['maint'] == 'very high').astype(int)
+    df_output['doors_2'] = (df_input['doors'] == '2').astype(int)
+    df_output['persons_2'] = (df_input['persons'] == '2').astype(int)
+    df_output['lug_boot_small'] = (df_input['lug_boot'] == 'small').astype(int)
+    df_output['safety_low'] = (df_input['safety'] == 'low').astype(int)
+    df_output['buying_medium'] = (df_input['buying'] == 'medium').astype(int)
+    df_output['maint_high'] = (df_input['maint'] == 'high').astype(int)
+    df_output['doors_2_persons_2'] = ((df_input['doors'] == '2') & (df_input['persons'] == '2')).astype(int)
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_very_good(df_input):
+    df_output = pd.DataFrame()
+    df_output['buying_low'] = (df_input['buying'] == 'low').astype(int)
+    df_output['maint_low'] = (df_input['maint'] == 'low').astype(int)
+    df_output['doors_5more'] = (df_input['doors'] == '5more').astype(int)
+    df_output['persons_more'] = (df_input['persons'] == 'more').astype(int)
+    df_output['lug_boot_big'] = (df_input['lug_boot'] == 'big').astype(int)
+    df_output['safety_high'] = (df_input['safety'] == 'high').astype(int)
+    df_output['buying_medium'] = (df_input['buying'] == 'medium').astype(int)
+    df_output['doors_4'] = (df_input['doors'] == '4').astype(int)
+    return df_output

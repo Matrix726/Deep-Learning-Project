@@ -1,0 +1,230 @@
+- age: age is not related to whether the client subscribes to a term deposit.
+- job: job is not related to whether the client subscribes to a term deposit.
+- marital: marital is not related to whether the client subscribes to a term deposit.
+- education: education is not related to whether the client subscribes to a term deposit.
+- default: default is not related to whether the client subscribes to a term deposit.
+- balance: balance is not related to whether the client subscribes to a term deposit.
+- housing: housing is not related to whether the client subscribes to a term deposit.
+- loan: loan is not related to whether the client subscribes to a term deposit.
+- contact: contact is not related to whether the client subscribes to a term deposit.
+- day: day is not related to whether the client subscribes to a term deposit.
+- month: month is not related to whether the client subscribes to a term deposit.
+- duration: duration is not related to whether the client subscribes to a term deposit.
+- campaign: campaign is not related to whether the client subscribes to a term deposit.
+- pdays: pdays is not related to whether the client subscribes to a term deposit.
+- previous: previous is not related to whether the client subscribes to a term deposit.
+- poutcome: poutcome is not related to whether the client subscribes to a term deposit.
+
+Step 2. 10 different conditions per answer:
+
+10 different conditions for class "no":
+- age is within range of [20, 70]
+- job is in [management, technician, entrepreneur, blue-collar, unknown, retired, admin., services, self-employed, unemployed, housemaid, student]
+- marital is in [married, single, divorced]
+- education is in [tertiary, secondary, unknown, primary]
+- default is in [no, yes]
+- balance is within range of [0, 20000]
+- housing is in [yes, no]
+- loan is in [no, yes]
+- contact is in [unknown, cellular, telephone]
+- day is within range of [1, 31]
+
+10 different conditions for class "yes":
+- age is within range of [20, 70]
+- job is in [management, technician, entrepreneur, blue-collar, unknown, retired, admin., services, self-employed, unemployed, housemaid, student]
+- marital is in [married, single, divorced]
+- education is in [tertiary, secondary, unknown, primary]
+- default is in [no, yes]
+- balance is within range of [0, 20000]
+- housing is in [yes, no]
+- loan is in [no, yes]
+- contact is in [unknown, cellular, telephone]
+- day is within range of [1, 31]
+
+---DIVIDER---
+
+- age: no clear relationship
+- job: no clear relationship
+- marital: no clear relationship
+- education: no clear relationship
+- default: no clear relationship
+- balance: no clear relationship
+- housing: no clear relationship
+- loan: no clear relationship
+- contact: no clear relationship
+- day: no clear relationship
+- month: no clear relationship
+- duration: no clear relationship
+- campaign: no clear relationship
+- pdays: no clear relationship
+- previous: no clear relationship
+- poutcome: no clear relationship
+
+Step 2. 
+10 different conditions for class "no":
+- age is within range of [17, 69]
+- job is in [management, retired, technician, admin., services, self-employed, unemployed, housemaid, student]
+- marital is in [married, single, divorced]
+- education is in [tertiary, secondary, unknown, primary]
+- default is in [no, yes]
+- balance is within range of [696, 17118]
+- housing is in [yes, no]
+- loan is in [no, yes]
+- contact is in [unknown, cellular, telephone]
+- poutcome is in [unknown, failure, other, success]
+
+10 different conditions for class "yes":
+- age is within range of [34, 53]
+- job is in [admin., services]
+- marital is in [married, single]
+- education is in [secondary]
+- default is in [no]
+- balance is within range of [1076, 2398]
+- housing is in [no]
+- loan is in [no]
+- contact is in [cellular]
+- poutcome is in [success]
+
+---DIVIDER---
+
+- age: People with a younger age are more likely to subscribe to a term deposit.
+- job: People with a job in management are more likely to subscribe to a term deposit.
+- marital: People who are married are more likely to subscribe to a term deposit.
+- education: People with a higher education are more likely to subscribe to a term deposit.
+- default: People with no credit in default are more likely to subscribe to a term deposit.
+- balance: People with a higher average yearly balance are more likely to subscribe to a term deposit.
+- housing: People with a housing loan are more likely to subscribe to a term deposit.
+- loan: People with no loan are more likely to subscribe to a term deposit.
+- contact: People who are contacted via cellular are more likely to subscribe to a term deposit.
+- day: People who are contacted later in the month are more likely to subscribe to a term deposit.
+- month: People who are contacted in May are more likely to subscribe to a term deposit.
+- duration: People who have a longer contact duration are more likely to subscribe to a term deposit.
+- campaign: People who have a higher number of contacts performed during this campaign are more likely to subscribe to a term deposit.
+- pdays: People who have a higher number of days that passed by after the client was last contacted from a previous campaign are more likely to subscribe to a term deposit.
+- previous: People who have a higher number of contacts performed before this campaign are more likely to subscribe to a term deposit.
+- poutcome: People who have a successful outcome of the previous marketing campaign are more likely to subscribe to a term deposit.
+
+Step 2. 10 different conditions for class "no":
+- age is within range of [18, 50]
+- job is in [technician, entrepreneur, blue-collar, unknown, retired, admin., services, self-employed, unemployed, housemaid, student]
+- marital is in [single, divorced]
+- education is in [secondary, primary, unknown]
+- default is yes
+- balance is within range of [0, 10000]
+- housing is no
+- loan is yes
+- contact is telephone
+- day is within range of [1, 15]
+- month is in [jun, jul, aug, oct, nov, dec, jan, fe, mar, apr, sep]
+- duration is within range of [0, 100]
+- campaign is within range of [1, 5]
+- pdays is within range of [0, 100]
+- previous is within range of [0, 5]
+- poutcome is in [failure, other, unknown]
+
+10 different conditions for class "yes":
+- age is within range of [50, 100]
+- job is management
+- marital is married
+- education is tertiary
+- default is no
+- balance is within range of [10000, 100000]
+- housing is yes
+- loan is no
+- contact is cellular
+- day is within range of [15, 31]
+- month is may
+- duration is within range of [100, 1000]
+- campaign is within range of [5, 10]
+- pdays is within range of [100, 1000]
+- previous is within range of [5, 10]
+- poutcome is success
+
+---DIVIDER---
+
+- age: no clear relationship
+- job: no clear relationship
+- marital: no clear relationship
+- education: no clear relationship
+- default: no clear relationship
+- balance: no clear relationship
+- housing: no clear relationship
+- loan: no clear relationship
+- contact: no clear relationship
+- day: no clear relationship
+- month: no clear relationship
+- duration: no clear relationship
+- campaign: no clear relationship
+- pdays: no clear relationship
+- previous: no clear relationship
+- poutcome: no clear relationship
+
+Step 2. Conditions for each answer class:
+10 different conditions for class "no":
+- age is within range of [40, 80]
+- job is in [management, technician, entrepreneur, blue-collar, unknown, retired, admin., services, self-employed, unemployed, housemaid, student]
+- marital is in [married, single, divorced]
+- education is in [tertiary, secondary, unknown, primary]
+- default is in [no, yes]
+- balance is within range of [0, 20000]
+- housing is in [yes, no]
+- loan is in [no, yes]
+- contact is in [unknown, cellular, telephone]
+- poutcome is in [unknown, failure, other, success]
+
+10 different conditions for class "yes":
+- age is within range of [20, 60]
+- job is in [management, technician, entrepreneur, blue-collar, unknown, retired, admin., services, self-employed, unemployed, housemaid, student]
+- marital is in [married, single, divorced]
+- education is in [tertiary, secondary, unknown, primary]
+- default is in [no, yes]
+- balance is within range of [0, 20000]
+- housing is in [yes, no]
+- loan is in [no, yes]
+- contact is in [unknown, cellular, telephone]
+- poutcome is in [unknown, failure, other, success]
+
+---DIVIDER---
+
+- age: no clear relationship
+- job: no clear relationship
+- marital: no clear relationship
+- education: no clear relationship
+- default: no clear relationship
+- balance: no clear relationship
+- housing: having a housing loan tends to have a term deposit
+- loan: having a loan tends not to have a term deposit
+- contact: no clear relationship
+- day: no clear relationship
+- month: no clear relationship
+- duration: no clear relationship
+- campaign: no clear relationship
+- pdays: no clear relationship
+- previous: no clear relationship
+- poutcome: no clear relationship
+
+Step 2. Conditions for each answer class:
+
+10 different conditions for class "no":
+- loan is yes
+- balance is within range of 0, 1000
+- age is within range of 60, 80
+- job is in [retired, unemployed, housemaid, student]
+- education is in [primary, unknown]
+- marital is single
+- housing is no
+- poutcome is failure
+- pdays is within range of 0, 30
+- previous is within range of 0, 3
+
+10 different conditions for class "yes":
+- housing is yes
+- balance is within range of 1000, 3000
+- age is within range of 30, 50
+- job is in [management, services]
+- education is tertiary
+- marital is married
+- loan is no
+- poutcome is success
+- pdays is within range of 100, 200
+- previous is within range of 4, 7

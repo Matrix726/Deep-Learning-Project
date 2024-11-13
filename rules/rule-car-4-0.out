@@ -1,0 +1,438 @@
+- buying: the lower the buying price, the better.
+- maint: the lower the maintenance price, the better.
+- doors: the more the number of doors, the better.
+- persons: the more the capacity, the better.
+- lug_boot: the bigger the size of luggage boot, the better.
+- safety: the higher the safety, the better.
+
+Step 2. 10 different conditions per answer class:
+
+10 different conditions for class "acceptable":
+- buying is low
+- maint is low
+- doors is 3
+- persons is more
+- lug_boot is med
+- safety is med
+- buying is low
+- maint is medium
+- doors is 4
+- persons is more
+- lug_boot is small
+- safety is high
+- buying is low
+- maint is medium
+- doors is 5more
+- persons is 4
+- lug_boot is big
+- safety is med
+- buying is low
+- maint is high
+- doors is 4
+- persons is more
+- lug_boot is big
+- safety is med
+- buying is medium
+- maint is low
+- doors is 3
+- persons is more
+- lug_boot is big
+- safety is med
+- buying is medium
+- maint is low
+- doors is 4
+- persons is more
+- lug_boot is med
+- safety is high
+- buying is medium
+- maint is medium
+- doors is 4
+- persons is 4
+- lug_boot is big
+- safety is med
+- buying is medium
+- maint is high
+- doors is 4
+- persons is more
+- lug_boot is med
+- safety is med
+- buying is high
+- maint is low
+- doors is 3
+- persons is more
+- lug_boot is big
+- safety is med
+- buying is high
+- maint is low
+- doors is 4
+- persons is more
+- lug_boot is med
+- safety is high
+
+10 different conditions for class "good":
+- buying is low
+- maint is low
+- doors is 4
+- persons is more
+- lug_boot is small
+- safety is high
+- buying is low
+- maint is low
+- doors is 5more
+- persons is more
+- lug_boot is med
+- safety is high
+- buying is low
+- maint is medium
+- doors is 4
+- persons is more
+- lug_boot is big
+- safety is high
+- buying is low
+- maint is high
+- doors is 4
+- persons is more
+- lug_boot is big
+- safety is med
+- buying is medium
+- maint is low
+- doors is 4
+- persons is more
+- lug_boot is big
+- safety is high
+- buying is medium
+- maint is low
+- doors is 5more
+- persons is more
+- lug_boot is big
+- safety is high
+- buying is medium
+- maint is medium
+- doors is 4
+- persons is more
+- lug_boot is big
+- safety is high
+- buying is medium
+- maint is high
+- doors is 4
+- persons is more
+- lug_boot is big
+- safety is med
+- buying is high
+- maint is low
+- doors is 4
+- persons is more
+- lug_boot is big
+- safety is high
+- buying is high
+- maint is medium
+- doors is 4
+- persons is more
+- lug_boot is big
+- safety is high
+
+10 different conditions for class "unacceptable":
+- buying is very high
+- maint is very high
+- doors is 2
+- persons is 2
+- lug_boot is small
+- safety is low
+- buying is very high
+- maint is high
+- doors is 3
+- persons is 2
+- lug_boot is small
+- safety is low
+- buying is very high
+- maint is medium
+- doors is 4
+- persons is 2
+- lug_boot is small
+- safety is low
+- buying is very high
+- maint is low
+- doors is 5more
+- persons is 2
+- lug_boot is small
+- safety is low
+- buying is high
+- maint is very high
+- doors is 2
+- persons is 2
+- lug_boot is small
+- safety is low
+- buying is high
+- maint is high
+- doors is 3
+- persons is 2
+- lug_boot is small
+- safety is low
+- buying is high
+- maint is medium
+- doors is 4
+- persons is 2
+- lug_boot is small
+- safety is low
+- buying is high
+- maint is low
+- doors is 5more
+- persons is 2
+- lug_boot is small
+- safety is low
+- buying is medium
+- maint is very high
+- doors is 2
+- persons is 2
+- lug_boot is small
+- safety is low
+- buying is medium
+- maint is high
+- doors is 3
+- persons is 2
+- lug_boot is small
+- safety is low
+
+10 different conditions for class "very good":
+- buying is low
+- maint is low
+- doors is 5more
+- persons is more
+- lug_boot is big
+- safety is high
+- buying is medium
+- maint is low
+- doors is 5more
+- persons is more
+- lug_boot is big
+- safety is high
+- buying is high
+- maint is low
+- doors is 5more
+- persons is more
+- lug_boot is big
+- safety is high
+- buying is low
+- maint is low
+- doors is 4
+- persons is more
+- lug_boot is big
+- safety is high
+- buying is medium
+- maint is low
+- doors is 4
+- persons is more
+- lug_boot is big
+- safety is high
+- buying is high
+- maint is low
+- doors is 4
+- persons is more
+- lug_boot is big
+- safety is high
+- buying is low
+- maint is medium
+- doors is 5more
+- persons is more
+- lug_boot is big
+- safety is high
+- buying is medium
+- maint is medium
+- doors is 5more
+- persons is more
+- lug_boot is big
+- safety is high
+- buying is high
+- maint is medium
+- doors is 5more
+- persons is more
+- lug_boot is big
+- safety is high
+
+---DIVIDER---
+
+- buying: The lower the buying price, the better.
+- maint: The lower the price of maintenance, the better.
+- doors: The more the number of doors, the better.
+- persons: The more the capacity in terms of persons to carry, the better.
+- lug_boot: The bigger the size of the luggage boot, the better.
+- safety: The higher the estimated safety of the car, the better.
+
+Step 2. Conditions for each answer class:
+
+10 different conditions for class "acceptable":
+- buying is low
+- maint is medium or low
+- doors is 3 or 4
+- persons is more
+- lug_boot is med or big
+- safety is med or high
+
+10 different conditions for class "good":
+- buying is low
+- maint is low
+- doors is 4 or 5more
+- persons is more
+- lug_boot is big
+- safety is high
+
+10 different conditions for class "unacceptable":
+- buying is very high
+- maint is very high
+- doors is 2
+- persons is 2
+- lug_boot is small
+- safety is low
+
+10 different conditions for class "very good":
+- buying is low or medium
+- maint is low
+- doors is 4 or 5more
+- persons is more
+- lug_boot is big
+- safety is high
+
+---DIVIDER---
+
+- buying: the lower the better
+- maint: the lower the better
+- doors: the more the better
+- persons: the more the better
+- lug_boot: the bigger the better
+- safety: the higher the better
+
+Step 2. Conditions for each answer class:
+
+10 different conditions for class "acceptable":
+- buying is low
+- maint is med or high
+- doors is 2 or 3
+- persons is 2 or 4
+- lug_boot is small or med
+- safety is med
+
+10 different conditions for class "good":
+- buying is low
+- maint is low
+- doors is 4 or 5more
+- persons is more
+- lug_boot is big
+- safety is high
+
+10 different conditions for class "unacceptable":
+- buying is very high
+- maint is very high
+- doors is 2
+- persons is 2
+- lug_boot is small
+- safety is low
+
+10 different conditions for class "very good":
+- buying is low or medium
+- maint is low
+- doors is 4 or 5more
+- persons is more
+- lug_boot is big
+- safety is high
+
+---DIVIDER---
+
+- buying: the lower the buying price, the more acceptable the decision is.
+- maint: the lower the maintenance price, the more acceptable the decision is.
+- doors: the more the number of doors, the more acceptable the decision is.
+- persons: the more the capacity of people to carry, the more acceptable the decision is.
+- lug_boot: the bigger the size of the luggage boot, the more acceptable the decision is.
+- safety: the higher the estimated safety of the car, the more acceptable the decision is.
+
+Step 2. Conditions for each answer class:
+
+10 different conditions for class "acceptable":
+- buying is in [low, very low]
+- maint is in [low, very low]
+- doors is in [3, 4, 5more]
+- persons is in [more]
+- lug_boot is in [big, med]
+- safety is in [med, high]
+
+10 different conditions for class "good":
+- buying is in [low, very low]
+- maint is in [low, very low, med]
+- doors is in [4, 5more]
+- persons is in [more]
+- lug_boot is in [big, med]
+- safety is in [high]
+
+10 different conditions for class "unacceptable":
+- buying is in [high, very high]
+- maint is in [high, very high]
+- doors is in [2]
+- persons is in [2]
+- lug_boot is in [small]
+- safety is in [low]
+
+10 different conditions for class "very good":
+- buying is in [low, very low]
+- maint is in [low, very low]
+- doors is in [4, 5more]
+- persons is in [more]
+- lug_boot is in [big]
+- safety is in [high]
+
+---DIVIDER---
+
+- buying: The lower the buying price, the better.
+- maint: The lower the maintenance price, the better.
+- doors: The more the number of doors, the better.
+- persons: The more the capacity, the better.
+- lug_boot: The bigger the luggage boot, the better.
+- safety: The higher the safety, the better.
+
+Step 2. Conditions for each answer class:
+
+10 different conditions for class "acceptable":
+- buying is low
+- maint is low
+- doors is 3
+- persons is more
+- lug_boot is big
+- safety is med
+- buying is medium
+- maint is medium
+- doors is 4
+- persons is more
+
+10 different conditions for class "good":
+- buying is low
+- maint is low
+- doors is 4
+- persons is more
+- lug_boot is small
+- safety is high
+- buying is low
+- maint is medium
+- doors is 5more
+- persons is more
+
+10 different conditions for class "unacceptable":
+- buying is high
+- maint is very high
+- doors is 2
+- persons is 2
+- lug_boot is small
+- safety is low
+- buying is medium
+- maint is high
+- doors is 2
+- persons is 2
+
+10 different conditions for class "very good":
+- buying is low
+- maint is low
+- doors is 5more
+- persons is more
+- lug_boot is big
+- safety is high
+- buying is medium
+- maint is low
+- doors is 4
+- persons is more

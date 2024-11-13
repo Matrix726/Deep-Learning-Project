@@ -1,0 +1,167 @@
+def extracting_features_no(df_input):
+    df_output = pd.DataFrame()
+    df_output['Age_no'] = (df_input['Age'] < 50).astype(int)
+    df_output['Sex_no'] = (df_input['Sex'] == 'F').astype(int)
+    df_output['ChestPainType_no'] = (df_input['ChestPainType'] != 'ATA').astype(int)
+    df_output['RestingBP_no'] = (df_input['RestingBP'] < 140).astype(int)
+    df_output['Cholesterol_no'] = (df_input['Cholesterol'] < 200).astype(int)
+    df_output['FastingBS_no'] = (df_input['FastingBS'] == 0).astype(int)
+    df_output['RestingECG_no'] = (df_input['RestingECG'] == 'Normal').astype(int)
+    df_output['MaxHR_no'] = (df_input['MaxHR'] > 120).astype(int)
+    df_output['ExerciseAngina_no'] = (df_input['ExerciseAngina'] == 'N').astype(int)
+    df_output['Oldpeak_no'] = (df_input['Oldpeak'] < 1.0).astype(int)
+    df_output['ST_Slope_no'] = (df_input['ST_Slope'] != 'Down').astype(int)
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_yes(df_input):
+    df_output = pd.DataFrame()
+    df_output['Age_60+'] = (df_input['Age'] >= 60).astype(int)
+    df_output['Sex_M'] = (df_input['Sex'] == 'M').astype(int)
+    df_output['ChestPainType_ATA'] = (df_input['ChestPainType'] == 'ATA').astype(int)
+    df_output['RestingBP_160+'] = (df_input['RestingBP'] >= 160).astype(int)
+    df_output['Cholesterol_220+'] = (df_input['Cholesterol'] >= 220).astype(int)
+    df_output['FastingBS_1'] = (df_input['FastingBS'] == 1).astype(int)
+    df_output['RestingECG_ST_LVH'] = (df_input['RestingECG'].isin(['ST', 'LVH'])).astype(int)
+    df_output['MaxHR_100-'] = (df_input['MaxHR'] <= 100).astype(int)
+    df_output['ExerciseAngina_Y'] = (df_input['ExerciseAngina'] == 'Y').astype(int)
+    df_output['Oldpeak_1.5+'] = (df_input['Oldpeak'] >= 1.5).astype(int)
+    df_output['ST_Slope_Down'] = (df_input['ST_Slope'] == 'Down').astype(int)
+    return df_output
+
+---VERSION---
+
+def extracting_features_no(df_input):
+    df_output = pd.DataFrame()
+    df_output['Age_no'] = (df_input['Age'] < 50).astype(int)
+    df_output['Sex_no'] = (df_input['Sex'] == 'F').astype(int)
+    df_output['ChestPainType_no'] = (df_input['ChestPainType'] == 'NAP').astype(int)
+    df_output['RestingBP_no'] = (df_input['RestingBP'] < 120).astype(int)
+    df_output['Cholesterol_no'] = (df_input['Cholesterol'] < 200).astype(int)
+    df_output['FastingBS_no'] = (df_input['FastingBS'] == 0).astype(int)
+    df_output['RestingECG_no'] = (df_input['RestingECG'] == 'Normal').astype(int)
+    df_output['MaxHR_no'] = (df_input['MaxHR'] > 140).astype(int)
+    df_output['ExerciseAngina_no'] = (df_input['ExerciseAngina'] == 'N').astype(int)
+    df_output['Oldpeak_no'] = (df_input['Oldpeak'] == 0.0).astype(int)
+    df_output['ST_Slope_no'] = (df_input['ST_Slope'] == 'Up').astype(int)
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_yes(df_input):
+    df_output = pd.DataFrame()
+    df_output['Age_60'] = (df_input['Age'] >= 60).astype(int)
+    df_output['Sex_M'] = (df_input['Sex'] == 'M').astype(int)
+    df_output['ChestPainType_ATA'] = (df_input['ChestPainType'] == 'ATA').astype(int)
+    df_output['RestingBP_140'] = (df_input['RestingBP'] >= 140).astype(int)
+    df_output['Cholesterol_240'] = (df_input['Cholesterol'] >= 240).astype(int)
+    df_output['FastingBS_1'] = (df_input['FastingBS'] == 1).astype(int)
+    df_output['RestingECG_ST'] = (df_input['RestingECG'] == 'ST').astype(int)
+    df_output['MaxHR_120'] = (df_input['MaxHR'] < 120).astype(int)
+    df_output['ExerciseAngina_Y'] = (df_input['ExerciseAngina'] == 'Y').astype(int)
+    df_output['Oldpeak_0'] = (df_input['Oldpeak'] > 0.0).astype(int)
+    df_output['ST_Slope_Down'] = (df_input['ST_Slope'] == 'Down').astype(int)
+    return df_output
+
+---VERSION---
+
+def extracting_features_no(df_input):
+    df_output = pd.DataFrame()
+    df_output['Age_no'] = (df_input['Age'] < 50).astype(int)
+    df_output['Sex_no'] = (df_input['Sex'] == 'F').astype(int)
+    df_output['ChestPainType_no'] = (df_input['ChestPainType'] == 'ATA').astype(int)
+    df_output['RestingBP_no'] = (df_input['RestingBP'] < 120).astype(int)
+    df_output['Cholesterol_no'] = (df_input['Cholesterol'] < 200).astype(int)
+    df_output['FastingBS_no'] = (df_input['FastingBS'] == 0).astype(int)
+    df_output['RestingECG_no'] = (df_input['RestingECG'] == 'Normal').astype(int)
+    df_output['MaxHR_no'] = (df_input['MaxHR'] > 140).astype(int)
+    df_output['ExerciseAngina_no'] = (df_input['ExerciseAngina'] == 'N').astype(int)
+    df_output['Oldpeak_no'] = (df_input['Oldpeak'] < 0.5).astype(int)
+    df_output['ST_Slope_no'] = (df_input['ST_Slope'] == 'Up').astype(int)
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_yes(df_input):
+    df_output = pd.DataFrame()
+    df_output['Age_60'] = (df_input['Age'] > 60).astype(int)
+    df_output['Sex_M'] = (df_input['Sex'] == 'M').astype(int)
+    df_output['ChestPainType_ASY'] = (df_input['ChestPainType'] == 'ASY').astype(int)
+    df_output['RestingBP_140'] = (df_input['RestingBP'] > 140).astype(int)
+    df_output['Cholesterol_240'] = (df_input['Cholesterol'] > 240).astype(int)
+    df_output['FastingBS_1'] = (df_input['FastingBS'] == 1).astype(int)
+    df_output['RestingECG_LVH'] = (df_input['RestingECG'] == 'LVH').astype(int)
+    df_output['MaxHR_120'] = (df_input['MaxHR'] < 120).astype(int)
+    df_output['ExerciseAngina_Y'] = (df_input['ExerciseAngina'] == 'Y').astype(int)
+    df_output['Oldpeak_1.0'] = (df_input['Oldpeak'] > 1.0).astype(int)
+    df_output['ST_Slope_Down'] = (df_input['ST_Slope'] == 'Down').astype(int)
+    return df_output
+
+---VERSION---
+
+def extracting_features_no(df_input):
+    df_output = pd.DataFrame()
+    df_output['Age_no'] = (df_input['Age'] <= 50).astype(int)
+    df_output['Sex_no'] = (df_input['Sex'] == 'F').astype(int)
+    df_output['ChestPainType_no'] = (df_input['ChestPainType'].isin(['ATA', 'NAP'])).astype(int)
+    df_output['RestingBP_no'] = (df_input['RestingBP'] <= 120).astype(int)
+    df_output['Cholesterol_no'] = (df_input['Cholesterol'] <= 200).astype(int)
+    df_output['FastingBS_no'] = (df_input['FastingBS'] == 0).astype(int)
+    df_output['RestingECG_no'] = (df_input['RestingECG'] == 'Normal').astype(int)
+    df_output['MaxHR_no'] = (df_input['MaxHR'] >= 140).astype(int)
+    df_output['ExerciseAngina_no'] = (df_input['ExerciseAngina'] == 'N').astype(int)
+    df_output['Oldpeak_no'] = (df_input['Oldpeak'] <= 0.0).astype(int)
+    df_output['ST_Slope_no'] = (df_input['ST_Slope'] == 'Up').astype(int)
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_yes(df_input):
+    df_output = pd.DataFrame()
+    df_output['Age_60'] = (df_input['Age'] >= 60).astype(int)
+    df_output['Sex_M'] = (df_input['Sex'] == 'M').astype(int)
+    df_output['ChestPainType_TA_ASY'] = (df_input['ChestPainType'].isin(['TA', 'ASY'])).astype(int)
+    df_output['RestingBP_140'] = (df_input['RestingBP'] >= 140).astype(int)
+    df_output['Cholesterol_240'] = (df_input['Cholesterol'] >= 240).astype(int)
+    df_output['FastingBS_1'] = (df_input['FastingBS'] == 1).astype(int)
+    df_output['RestingECG_ST_LVH'] = (df_input['RestingECG'].isin(['ST', 'LVH'])).astype(int)
+    df_output['MaxHR_120'] = (df_input['MaxHR'] <= 120).astype(int)
+    df_output['ExerciseAngina_Y'] = (df_input['ExerciseAngina'] == 'Y').astype(int)
+    df_output['Oldpeak_1'] = (df_input['Oldpeak'] >= 1.0).astype(int)
+    df_output['ST_Slope_Down'] = (df_input['ST_Slope'] == 'Down').astype(int)
+    return df_output
+
+---VERSION---
+
+def extracting_features_no(df_input):
+    df_output = pd.DataFrame()
+    df_output['Age_no'] = (df_input['Age'] < 60).astype(int)
+    df_output['Sex_no'] = (df_input['Sex'] == 'F').astype(int)
+    df_output['ChestPainType_no'] = (df_input['ChestPainType'] == 'ATA').astype(int)
+    df_output['RestingBP_no'] = (df_input['RestingBP'] < 130).astype(int)
+    df_output['Cholesterol_no'] = (df_input['Cholesterol'] < 200).astype(int)
+    df_output['FastingBS_no'] = (df_input['FastingBS'] == 0).astype(int)
+    df_output['RestingECG_no'] = (df_input['RestingECG'] == 'Normal').astype(int)
+    df_output['MaxHR_no'] = (df_input['MaxHR'] > 140).astype(int)
+    df_output['ExerciseAngina_no'] = (df_input['ExerciseAngina'] == 'N').astype(int)
+    df_output['Oldpeak_no'] = (df_input['Oldpeak'] < 1.0).astype(int)
+    df_output['ST_Slope_no'] = (df_input['ST_Slope'] == 'Up').astype(int)
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_yes(df_input):
+    df_output = pd.DataFrame()
+    df_output['Age_60+'] = (df_input['Age'] > 60).astype(int)
+    df_output['Sex_M'] = (df_input['Sex'] == 'M').astype(int)
+    df_output['ChestPainType_ASY'] = (df_input['ChestPainType'] == 'ASY').astype(int)
+    df_output['RestingBP_140+'] = (df_input['RestingBP'] > 140).astype(int)
+    df_output['Cholesterol_200+'] = (df_input['Cholesterol'] > 200).astype(int)
+    df_output['FastingBS_1'] = (df_input['FastingBS'] == 1).astype(int)
+    df_output['RestingECG_ST_LVH'] = (df_input['RestingECG'].isin(['ST', 'LVH'])).astype(int)
+    df_output['MaxHR_120-'] = (df_input['MaxHR'] < 120).astype(int)
+    df_output['ExerciseAngina_Y'] = (df_input['ExerciseAngina'] == 'Y').astype(int)
+    df_output['Oldpeak_1.0+'] = (df_input['Oldpeak'] > 1.0).astype(int)
+    df_output['ST_Slope_Flat_Down'] = (df_input['ST_Slope'].isin(['Flat', 'Down'])).astype(int)
+    return df_output

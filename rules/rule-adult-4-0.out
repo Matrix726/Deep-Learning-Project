@@ -1,0 +1,210 @@
+- age: no clear relationship
+- workclass: no clear relationship
+- fnlwgt: no clear relationship
+- education: higher education tends to earn more
+- educational-num: higher education tends to earn more
+- marital-status: married tends to earn more
+- occupation: professional specialty tends to earn more
+- relationship: no clear relationship
+- race: no clear relationship
+- gender: no clear relationship
+- capital-gain: higher capital gain tends to earn more
+- capital-loss: no clear relationship
+- hours-per-week: more working hours tend to earn more
+- native-country: no clear relationship
+
+Step 2.
+10 different conditions for class "no":
+- educational-num is within range of [6, 8]
+- occupation is in [Machine-op-inspct, Farming-fishing, Protective-serv, Other-service, Craft-repair, Adm-clerical, Handlers-cleaners, Armed-Forces]
+- hours-per-week is within range of [20, 40]
+- capital-gain is 0
+- age is within range of [20, 68]
+- workclass is in [Local-gov, ?]
+- marital-status is Never-married
+- relationship is in [Own-child, Unmarried]
+- race is in [Black, White, Amer-Indian-Eskimo]
+- gender is Male
+
+10 different conditions for class "yes":
+- educational-num is within range of [13, 15]
+- occupation is Prof-specialty
+- hours-per-week is within range of [40, 55]
+- capital-gain is within range of [4386, 4386]
+- age is 49
+- workclass is Private
+- marital-status is Married-civ-spouse
+- relationship is Husband
+- race is White
+- gender is Male
+
+---DIVIDER---
+
+- age: People who are older tend to earn more.
+- workclass: People who work in the private sector tend to earn more than those who work in the public sector.
+- fnlwgt: This feature is not relevant to the task.
+- education: People with higher levels of education tend to earn more.
+- educational-num: This feature is not relevant to the task.
+- marital-status: Married people tend to earn more than single people.
+- occupation: People in certain occupations, such as professionals and managers, tend to earn more than those in other occupations.
+- relationship: This feature is not relevant to the task.
+- race: This feature is not relevant to the task.
+- gender: Men tend to earn more than women.
+- capital-gain: People with higher capital gains tend to earn more.
+- capital-loss: This feature is not relevant to the task.
+- hours-per-week: People who work more hours tend to earn more.
+- native-country: This feature is not relevant to the task.
+
+Step 2. 10 different conditions per answer class:
+
+10 different conditions for class "no":
+- age is within range of [18, 30]
+- workclass is in [Local-gov, State-gov, Without-pay, Never-worked]
+- education is in [11th, HS-grad, Some-college, 10th, 7th-8th, 5th-6th, 1st-4th, Preschool]
+- marital-status is in [Never-married, Divorced, Separated, Married-spouse-absent, Married-AF-spouse]
+- occupation is in [Machine-op-inspct, Farming-fishing, Protective-serv, Other-service, Craft-repair, Adm-clerical, Handlers-cleaners, Armed-Forces]
+- gender is Female
+- capital-gain is 0
+- hours-per-week is within range of [1, 40]
+
+10 different conditions for class "yes":
+- age is within range of [40, 65]
+- workclass is Private
+- education is in [Prof-school, Bachelors, Masters, Doctorate, Assoc-voc, 12th, 9th]
+- marital-status is Married-civ-spouse
+- occupation is in [Prof-specialty, Exec-managerial, Tech-support, Sales]
+- gender is Male
+- capital-gain is greater than 0
+- hours-per-week is within range of [45, 60]
+
+---DIVIDER---
+
+- age: no clear relationship
+- workclass: no clear relationship
+- fnlwgt: no clear relationship
+- education: higher education tends to earn more
+- educational-num: higher education tends to earn more
+- marital-status: married tends to earn more
+- occupation: higher-level occupation tends to earn more
+- relationship: no clear relationship
+- race: no clear relationship
+- gender: no clear relationship
+- capital-gain: higher capital gain tends to earn more
+- capital-loss: no clear relationship
+- hours-per-week: more working hours tend to earn more
+- native-country: no clear relationship
+
+Step 2. Conditions for each answer class:
+10 different conditions for class "no":
+- educational-num < 12
+- occupation is in [Machine-op-inspct, Farming-fishing, Protective-serv, Other-service, Craft-repair, Adm-clerical, Handlers-cleaners, Armed-Forces]
+- hours-per-week < 40
+- capital-gain = 0
+- capital-loss > 0
+- marital-status is in [Never-married, Divorced, Separated]
+- workclass is in [?, Self-emp-not-inc, Without-pay, Never-worked]
+- age < 25
+- gender is Female
+- race is Black
+
+10 different conditions for class "yes":
+- educational-num >= 13
+- occupation is in [Prof-specialty, Exec-managerial, Tech-support, Sales]
+- hours-per-week >= 50
+- capital-gain > 0
+- capital-loss = 0
+- marital-status is Married-civ-spouse
+- workclass is Private
+- age >= 40
+- gender is Male
+- race is White
+
+---DIVIDER---
+
+- age: people with higher age tend to earn more.
+- workclass: people with workclass of Private, Self-emp-not-inc, Self-emp-inc tend to earn more.
+- fnlwgt: people with higher fnlwgt tend to earn more.
+- education: people with higher education tend to earn more.
+- educational-num: people with higher educational-num tend to earn more.
+- marital-status: people with marital-status of Married-civ-spouse tend to earn more.
+- occupation: people with occupation of Prof-specialty, Exec-managerial tend to earn more.
+- relationship: people with relationship of Husband tend to earn more.
+- race: people with race of White tend to earn more.
+- gender: no clear tendency.
+- capital-gain: people with higher capital-gain tend to earn more.
+- capital-loss: people with higher capital-loss tend to earn less.
+- hours-per-week: people with higher hours-per-week tend to earn more.
+- native-country: people with native-country of United-States tend to earn more.
+
+Step 2. Conditions:
+10 different conditions for class "no":
+- age < 40
+- workclass is in [Local-gov, ?, State-gov, Without-pay, Never-worked]
+- fnlwgt < 150000
+- education is in [11th, HS-grad, Some-college, 10th, 7th-8th, 5th-6th, 1st-4th, Preschool]
+- educational-num < 12
+- marital-status is in [Never-married, Widowed, Divorced, Separated, Married-spouse-absent, Married-AF-spouse]
+- occupation is in [Machine-op-inspct, Farming-fishing, Protective-serv, Other-service, Craft-repair, Adm-clerical, Sales, Priv-house-serv, Transport-moving, Handlers-cleaners, Armed-Forces]
+- relationship is in [Own-child, Not-in-family, Unmarried, Wife, Other-relative]
+- race is in [Black, Asian-Pac-Islander, Other, Amer-Indian-Eskimo]
+- hours-per-week < 40
+- capital-gain = 0
+- capital-loss > 0
+- native-country is not United-States
+
+10 different conditions for class "yes":
+- age >= 40
+- workclass is in [Private, Self-emp-not-inc, Self-emp-inc]
+- fnlwgt >= 150000
+- education is in [Bachelors, Masters, Doctorate, Assoc-acdm, Assoc-voc, Prof-school]
+- educational-num >= 13
+- marital-status is Married-civ-spouse
+- occupation is in [Prof-specialty, Exec-managerial]
+- relationship is Husband
+- race is White
+- hours-per-week >= 40
+- capital-gain > 0
+- capital-loss = 0
+- native-country is United-States
+
+---DIVIDER---
+
+- age: no clear relationship
+- workclass: no clear relationship
+- fnlwgt: no clear relationship
+- education: positive relationship
+- educational-num: positive relationship
+- marital-status: no clear relationship
+- occupation: no clear relationship
+- relationship: no clear relationship
+- race: no clear relationship
+- gender: no clear relationship
+- capital-gain: positive relationship
+- capital-loss: no clear relationship
+- hours-per-week: positive relationship
+- native-country: no clear relationship
+
+Step 2. Conditions for each answer class:
+10 different conditions for class "no":
+- educational-num is within range of [6, 9]
+- hours-per-week is within range of [20, 40]
+- capital-gain is 0
+- capital-loss is 0
+- workclass is Local-gov
+- occupation is Other-service
+- relationship is Husband
+- race is Black
+- gender is Male
+- native-country is United-States
+
+10 different conditions for class "yes":
+- educational-num is within range of [13, 16]
+- hours-per-week is within range of [40, 60]
+- capital-gain is within range of [4386, 10000]
+- capital-loss is 0
+- workclass is Private
+- occupation is Prof-specialty
+- relationship is Husband
+- race is White
+- gender is Male
+- native-country is United-States

@@ -1,0 +1,157 @@
+def extracting_features_no(df_input):
+    df_output = pd.DataFrame()
+    df_output['residence_since_0_2'] = (df_input['residence_since'] >= 0) & (df_input['residence_since'] <= 2)
+    df_output['own_telephone_none'] = df_input['own_telephone'] == 'none'
+    df_output['job_unskilled_resident'] = df_input['job'] == 'unskilled resident'
+    df_output['housing_free'] = df_input['housing'] == 'free'
+    df_output['checking_status_<0'] = df_input['checking_status'] < 0
+    df_output['num_dependents_>=2'] = df_input['num_dependents'] >= 2
+    df_output['property_magnitude_no_known_property'] = df_input['property_magnitude'] == 'no known property'
+    df_output['credit_history_critical/other_existing_credit'] = (df_input['credit_history'] == 'critical') | (df_input['credit_history'] == 'other existing credit')
+    df_output['purpose_radio/tv'] = df_input['purpose'] == 'radio/tv'
+    df_output['other_parties_guarantor'] = df_input['other_parties'] == 'guarantor'
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_yes(df_input):
+    df_output = pd.DataFrame()
+    df_output['residence_since_3'] = (df_input['residence_since'] >= 3).astype(int)
+    df_output['own_telephone_yes'] = (df_input['own_telephone'] == 'yes').astype(int)
+    df_output['job_high_qualif_self_emp_mgmt'] = (df_input['job'] == 'high qualif/self emp/mgmt').astype(int)
+    df_output['housing_own'] = (df_input['housing'] == 'own').astype(int)
+    df_output['checking_status_200'] = (df_input['checking_status'] >= 200).astype(int)
+    df_output['num_dependents_1'] = (df_input['num_dependents'] <= 1).astype(int)
+    df_output['property_magnitude_real_estate'] = (df_input['property_magnitude'] == 'real estate').astype(int)
+    df_output['credit_history_all_paid'] = (df_input['credit_history'] == 'all paid').astype(int)
+    df_output['purpose_used_car'] = (df_input['purpose'] == 'used car').astype(int)
+    df_output['other_parties_none'] = (df_input['other_parties'] == 'none').astype(int)
+    return df_output
+
+---VERSION---
+
+def extracting_features_no(df_input):
+    df_output = pd.DataFrame()
+    df_output['age_less_44'] = (df_input['age'] < 44).astype(int)
+    df_output['employment_unemployed'] = (df_input['employment'] == 'unemployed').astype(int)
+    df_output['savings_status_less_100'] = (df_input['savings_status'] == '<100').astype(int)
+    df_output['duration_more_18'] = (df_input['duration'] > 18).astype(int)
+    df_output['personal_status_male_single'] = (df_input['personal_status'] == 'male single').astype(int)
+    df_output['existing_credits_more_1'] = (df_input['existing_credits'] > 1).astype(int)
+    df_output['residence_since_less_3'] = (df_input['residence_since'] < 3).astype(int)
+    df_output['credit_history_critical_other'] = (df_input['credit_history'].isin(['critical', 'other existing credit'])).astype(int)
+    df_output['purpose_business'] = (df_input['purpose'] == 'business').astype(int)
+    df_output['other_parties_none'] = (df_input['other_parties'] == 'none').astype(int)
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_yes(df_input):
+    df_output = pd.DataFrame()
+    df_output['age_44'] = (df_input['age'] > 44).astype(int)
+    df_output['employment_7'] = (df_input['employment'] == '>=7').astype(int)
+    df_output['savings_100'] = (df_input['savings_status'] > '100').astype(int)
+    df_output['duration_18'] = (df_input['duration'] < 18).astype(int)
+    df_output['personal_status_female_div_dep_mar'] = (df_input['personal_status'] == 'female div/dep/mar').astype(int)
+    df_output['existing_credits_1'] = (df_input['existing_credits'] <= 1).astype(int)
+    df_output['residence_since_3'] = (df_input['residence_since'] > 3).astype(int)
+    df_output['credit_history_all_paid'] = (df_input['credit_history'] == 'all paid').astype(int)
+    df_output['purpose_used_car'] = (df_input['purpose'] == 'used car').astype(int)
+    df_output['other_parties_none'] = (df_input['other_parties'] == 'none').astype(int)
+    return df_output
+
+---VERSION---
+
+def extracting_features_no(df_input):
+    df_output = pd.DataFrame()
+    df_output['foreign_worker_yes'] = (df_input['foreign_worker'] == 'yes').astype(int)
+    df_output['num_dependents_2_5'] = ((df_input['num_dependents'] >= 2) & (df_input['num_dependents'] <= 5)).astype(int)
+    df_output['installment_commitment_3_6'] = ((df_input['installment_commitment'] >= 3) & (df_input['installment_commitment'] <= 6)).astype(int)
+    df_output['credit_amount_1000_3000'] = ((df_input['credit_amount'] >= 1000) & (df_input['credit_amount'] <= 3000)).astype(int)
+    df_output['job_unskilled_resident'] = (df_input['job'] == 'unskilled resident').astype(int)
+    df_output['employment_1_4'] = ((df_input['employment'] >= 1) & (df_input['employment'] <= 4)).astype(int)
+    df_output['personal_status_male_single'] = (df_input['personal_status'] == 'male single').astype(int)
+    df_output['other_parties_none'] = (df_input['other_parties'] == 'none').astype(int)
+    df_output['housing_rent'] = (df_input['housing'] == 'rent').astype(int)
+    df_output['own_telephone_none'] = (df_input['own_telephone'] == 'none').astype(int)
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_yes(df_input):
+    df_output = pd.DataFrame()
+    df_output['foreign_worker_no'] = (df_input['foreign_worker'] == 'no').astype(int)
+    df_output['num_dependents_0_1'] = (df_input['num_dependents'].between(0, 1)).astype(int)
+    df_output['installment_commitment_1_2'] = (df_input['installment_commitment'].between(1, 2)).astype(int)
+    df_output['credit_amount_5000_10000'] = (df_input['credit_amount'].between(5000, 10000)).astype(int)
+    df_output['job_high_qualif_self_emp_mgmt'] = (df_input['job'] == 'high qualif/self emp/mgmt').astype(int)
+    df_output['employment_7_10'] = (df_input['employment'].between(7, 10)).astype(int)
+    df_output['personal_status_female_div_dep_mar'] = (df_input['personal_status'] == 'female div/dep/mar').astype(int)
+    df_output['other_parties_none'] = (df_input['other_parties'] == 'none').astype(int)
+    df_output['housing_own'] = (df_input['housing'] == 'own').astype(int)
+    df_output['own_telephone_yes'] = (df_input['own_telephone'] == 'yes').astype(int)
+    return df_output
+
+---VERSION---
+
+def extracting_features_no(df_input):
+    df_output = pd.DataFrame()
+    df_output['housing_no'] = (df_input['housing'] == 'for free') | (df_input['housing'] == 'rent')
+    df_output['duration_no'] = df_input['duration'] < 18
+    df_output['property_magnitude_no'] = (df_input['property_magnitude'] == 'no known property') | (df_input['property_magnitude'] == 'car')
+    df_output['credit_amount_no'] = df_input['credit_amount'] > 1553
+    df_output['personal_status_no'] = (df_input['personal_status'] == 'male single') | (df_input['personal_status'] == 'male div/sep')
+    df_output['other_parties_no'] = df_input['other_parties'] == 'none'
+    df_output['purpose_no'] = (df_input['purpose'] == 'furniture/equipment') | (df_input['purpose'] == 'radio/tv')
+    df_output['existing_credits_no'] = df_input['existing_credits'] > 1
+    df_output['job_no'] = (df_input['job'] == 'unskilled resident') | (df_input['job'] == 'unemp/unskilled non res')
+    df_output['residence_since_no'] = df_input['residence_since'] < 3
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_yes(df_input):
+    df_output = pd.DataFrame()
+    df_output['housing_is_own'] = (df_input['housing'] == 'own').astype(int)
+    df_output['duration_is_ge_18'] = (df_input['duration'] >= 18).astype(int)
+    df_output['property_magnitude_is_real_estate'] = (df_input['property_magnitude'] == 'real estate').astype(int)
+    df_output['credit_amount_is_le_1553'] = (df_input['credit_amount'] <= 1553).astype(int)
+    df_output['personal_status_is_in_female_div_dep_mar_male_mar_wid'] = (df_input['personal_status'].isin(['female div/dep/mar', 'male mar/wid'])).astype(int)
+    df_output['other_parties_is_none'] = (df_input['other_parties'] == 'none').astype(int)
+    df_output['purpose_is_in_used_car_business'] = (df_input['purpose'].isin(['used car', 'business'])).astype(int)
+    df_output['existing_credits_is_le_1'] = (df_input['existing_credits'] <= 1).astype(int)
+    df_output['job_is_in_skilled_high_qualif_self_emp_mgmt'] = (df_input['job'].isin(['skilled', 'high qualif/self emp/mgmt'])).astype(int)
+    df_output['residence_since_is_ge_3'] = (df_input['residence_since'] >= 3).astype(int)
+    return df_output
+
+---VERSION---
+
+def extracting_features_no(df_input):
+    df_output = pd.DataFrame()
+    df_output['other_payment_plans_no'] = (df_input['other_payment_plans'].isin(['bank', 'stores'])).astype(int)
+    df_output['own_telephone_no'] = (df_input['own_telephone'] == 'none').astype(int)
+    df_output['employment_no'] = (df_input['employment'].isin(['1<=X<4', 'unemployed', '<1'])).astype(int)
+    df_output['num_dependents_no'] = (df_input['num_dependents'] >= 2).astype(int)
+    df_output['personal_status_no'] = (df_input['personal_status'] == 'male single').astype(int)
+    df_output['savings_status_no'] = (df_input['savings_status'].isin(['no known savings', '<100'])).astype(int)
+    df_output['property_magnitude_no'] = (df_input['property_magnitude'].isin(['no known property', 'car'])).astype(int)
+    df_output['duration_no'] = (df_input['duration'] < 12).astype(int)
+    df_output['job_no'] = (df_input['job'].isin(['unskilled resident', 'unemp/unskilled non res'])).astype(int)
+    df_output['credit_amount_no'] = (df_input['credit_amount'] >= 2000).astype(int)
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_yes(df_input):
+    df_output = pd.DataFrame()
+    df_output['other_payment_plans_none'] = (df_input['other_payment_plans'] == 'none').astype(int)
+    df_output['own_telephone_yes'] = (df_input['own_telephone'] == 'yes').astype(int)
+    df_output['employment_7+'] = (df_input['employment'] == '>=7').astype(int)
+    df_output['num_dependents_1'] = (df_input['num_dependents'] <= 1).astype(int)
+    df_output['personal_status_female_div_dep_mar_male_mar_wid'] = (df_input['personal_status'].isin(['female div/dep/mar', 'male mar/wid'])).astype(int)
+    df_output['savings_status_100+_500_1000_1000+'] = (df_input['savings_status'].isin(['>=100', '500<=X<1000', '>=1000'])).astype(int)
+    df_output['property_magnitude_real_estate'] = (df_input['property_magnitude'] == 'real estate').astype(int)
+    df_output['duration_24+'] = (df_input['duration'] >= 24).astype(int)
+    df_output['job_skilled_high_qualif_self_emp_mgmt'] = (df_input['job'].isin(['skilled', 'high qualif/self emp/mgmt'])).astype(int)
+    df_output['credit_amount_2000'] = (df_input['credit_amount'] < 2000).astype(int)
+    return df_output

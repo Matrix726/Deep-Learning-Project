@@ -1,0 +1,208 @@
+def extracting_features_no(df_input):
+    df_output = pd.DataFrame()
+    df_output['educational-num_6_8'] = (df_input['educational-num'] >= 6) & (df_input['educational-num'] <= 8)
+    df_output['occupation_in_list'] = df_input['occupation'].isin(['Machine-op-inspct', 'Farming-fishing', 'Protective-serv', 'Other-service', 'Craft-repair', 'Adm-clerical', 'Handlers-cleaners', 'Armed-Forces'])
+    df_output['hours-per-week_20_40'] = (df_input['hours-per-week'] >= 20) & (df_input['hours-per-week'] <= 40)
+    df_output['capital-gain_0'] = (df_input['capital-gain'] == 0)
+    df_output['age_20_68'] = (df_input['age'] >= 20) & (df_input['age'] <= 68)
+    df_output['workclass_in_list'] = df_input['workclass'].isin(['Local-gov', '?'])
+    df_output['marital-status_Never-married'] = (df_input['marital-status'] == 'Never-married')
+    df_output['relationship_in_list'] = df_input['relationship'].isin(['Own-child', 'Unmarried'])
+    df_output['race_in_list'] = df_input['race'].isin(['Black', 'White', 'Amer-Indian-Eskimo'])
+    df_output['gender_Male'] = (df_input['gender'] == 'Male')
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_yes(df_input):
+    df_output = pd.DataFrame()
+    df_output['educational-num_in_range'] = (df_input['educational-num'] >= 13) & (df_input['educational-num'] <= 15)
+    df_output['occupation_is_Prof-specialty'] = df_input['occupation'] == 'Prof-specialty'
+    df_output['hours-per-week_in_range'] = (df_input['hours-per-week'] >= 40) & (df_input['hours-per-week'] <= 55)
+    df_output['capital-gain_is_4386'] = df_input['capital-gain'] == 4386
+    df_output['age_is_49'] = df_input['age'] == 49
+    df_output['workclass_is_Private'] = df_input['workclass'] == 'Private'
+    df_output['marital-status_is_Married-civ-spouse'] = df_input['marital-status'] == 'Married-civ-spouse'
+    df_output['relationship_is_Husband'] = df_input['relationship'] == 'Husband'
+    df_output['race_is_White'] = df_input['race'] == 'White'
+    df_output['gender_is_Male'] = df_input['gender'] == 'Male'
+    return df_output
+
+---VERSION---
+
+def extracting_features_no(df_input):
+    """
+    Extracting features that do not follow the condition.
+
+    Args:
+        df_input (pd.DataFrame): Input dataframe.
+
+    Returns:
+        pd.DataFrame: Dataframe with extracted features.
+    """
+
+    df_output = pd.DataFrame()
+
+    # Numerical features
+    df_output['age_no'] = (df_input['age'] < 18) | (df_input['age'] > 30)
+    df_output['fnlwgt_no'] = df_input['fnlwgt'] == 0
+    df_output['educational-num_no'] = df_input['educational-num'] == 0
+    df_output['capital-gain_no'] = df_input['capital-gain'] != 0
+    df_output['hours-per-week_no'] = (df_input['hours-per-week'] < 1) | (df_input['hours-per-week'] > 40)
+
+    # Categorical features
+    df_output['workclass_no'] = ~df_input['workclass'].isin(['Local-gov', 'State-gov', 'Without-pay', 'Never-worked'])
+    df_output['education_no'] = ~df_input['education'].isin(['11th', 'HS-grad', 'Some-college', '10th', '7th-8th', '5th-6th', '1st-4th', 'Preschool'])
+    df_output['marital-status_no'] = ~df_input['marital-status'].isin(['Never-married', 'Divorced', 'Separated', 'Married-spouse-absent', 'Married-AF-spouse'])
+    df_output['occupation_no'] = ~df_input['occupation'].isin(['Machine-op-inspct', 'Farming-fishing', 'Protective-serv', 'Other-service', 'Craft-repair', 'Adm-clerical', 'Handlers-cleaners', 'Armed-Forces'])
+    df_output['gender_no'] = df_input['gender'] != 'Female'
+
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_yes(df_input):
+    """
+    Extracting features that meet the given conditions.
+
+    Args:
+        df_input (pd.DataFrame): Input dataframe.
+
+    Returns:
+        pd.DataFrame: Dataframe with extracted features.
+    """
+
+    df_output = pd.DataFrame()
+
+    # Numerical features
+    df_output['age_40_65'] = (df_input['age'] >= 40) & (df_input['age'] <= 65)
+    df_output['capital_gain_gt_0'] = df_input['capital-gain'] > 0
+    df_output['hours_per_week_45_60'] = (df_input['hours-per-week'] >= 45) & (df_input['hours-per-week'] <= 60)
+
+    # Categorical features
+    df_output['workclass_Private'] = df_input['workclass'] == 'Private'
+    df_output['education_in_list'] = df_input['education'].isin(['Prof-school', 'Bachelors', 'Masters', 'Doctorate', 'Assoc-voc', '12th', '9th'])
+    df_output['marital-status_Married-civ-spouse'] = df_input['marital-status'] == 'Married-civ-spouse'
+    df_output['occupation_in_list'] = df_input['occupation'].isin(['Prof-specialty', 'Exec-managerial', 'Tech-support', 'Sales'])
+    df_output['gender_Male'] = df_input['gender'] == 'Male'
+
+    return df_output
+
+---VERSION---
+
+def extracting_features_no(df_input):
+    df_output = pd.DataFrame()
+    df_output['educational-num < 12'] = (df_input['educational-num'] < 12).astype(int)
+    df_output['occupation in [Machine-op-inspct, Farming-fishing, Protective-serv, Other-service, Craft-repair, Adm-clerical, Handlers-cleaners, Armed-Forces]'] = (df_input['occupation'].isin(['Machine-op-inspct', 'Farming-fishing', 'Protective-serv', 'Other-service', 'Craft-repair', 'Adm-clerical', 'Handlers-cleaners', 'Armed-Forces'])).astype(int)
+    df_output['hours-per-week < 40'] = (df_input['hours-per-week'] < 40).astype(int)
+    df_output['capital-gain = 0'] = (df_input['capital-gain'] == 0).astype(int)
+    df_output['capital-loss > 0'] = (df_input['capital-loss'] > 0).astype(int)
+    df_output['marital-status in [Never-married, Divorced, Separated]'] = (df_input['marital-status'].isin(['Never-married', 'Divorced', 'Separated'])).astype(int)
+    df_output['workclass in [?, Self-emp-not-inc, Without-pay, Never-worked]'] = (df_input['workclass'].isin(['?', 'Self-emp-not-inc', 'Without-pay', 'Never-worked'])).astype(int)
+    df_output['age < 25'] = (df_input['age'] < 25).astype(int)
+    df_output['gender is Female'] = (df_input['gender'] == 'Female').astype(int)
+    df_output['race is Black'] = (df_input['race'] == 'Black').astype(int)
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_yes(df_input):
+    df_output = pd.DataFrame()
+    df_output['educational-num >= 13'] = (df_input['educational-num'] >= 13).astype(int)
+    df_output['occupation in [Prof-specialty, Exec-managerial, Tech-support, Sales]'] = (df_input['occupation'].isin(['Prof-specialty', 'Exec-managerial', 'Tech-support', 'Sales'])).astype(int)
+    df_output['hours-per-week >= 50'] = (df_input['hours-per-week'] >= 50).astype(int)
+    df_output['capital-gain > 0'] = (df_input['capital-gain'] > 0).astype(int)
+    df_output['capital-loss = 0'] = (df_input['capital-loss'] == 0).astype(int)
+    df_output['marital-status is Married-civ-spouse'] = (df_input['marital-status'] == 'Married-civ-spouse').astype(int)
+    df_output['workclass is Private'] = (df_input['workclass'] == 'Private').astype(int)
+    df_output['age >= 40'] = (df_input['age'] >= 40).astype(int)
+    df_output['gender is Male'] = (df_input['gender'] == 'Male').astype(int)
+    df_output['race is White'] = (df_input['race'] == 'White').astype(int)
+    return df_output
+
+---VERSION---
+
+def extracting_features_no(df_input):
+    """
+    Extracting features that do not follow the condition.
+
+    Args:
+        df_input (pd.DataFrame): Input dataframe.
+
+    Returns:
+        pd.DataFrame: Dataframe with extracted features.
+    """
+
+    df_output = pd.DataFrame()
+
+    # Numerical features
+    df_output['age_no'] = (df_input['age'] >= 40).astype(int)
+    df_output['fnlwgt_no'] = (df_input['fnlwgt'] >= 150000).astype(int)
+    df_output['educational-num_no'] = (df_input['educational-num'] >= 12).astype(int)
+    df_output['hours-per-week_no'] = (df_input['hours-per-week'] >= 40).astype(int)
+    df_output['capital-gain_no'] = (df_input['capital-gain'] != 0).astype(int)
+    df_output['capital-loss_no'] = (df_input['capital-loss'] <= 0).astype(int)
+
+    # Categorical features
+    df_output['workclass_no'] = ~df_input['workclass'].isin(['Local-gov', '?', 'State-gov', 'Without-pay', 'Never-worked']).astype(int)
+    df_output['education_no'] = ~df_input['education'].isin(['11th', 'HS-grad', 'Some-college', '10th', '7th-8th', '5th-6th', '1st-4th', 'Preschool']).astype(int)
+    df_output['marital-status_no'] = ~df_input['marital-status'].isin(['Never-married', 'Widowed', 'Divorced', 'Separated', 'Married-spouse-absent', 'Married-AF-spouse']).astype(int)
+    df_output['occupation_no'] = ~df_input['occupation'].isin(['Machine-op-inspct', 'Farming-fishing', 'Protective-serv', 'Other-service', 'Craft-repair', 'Adm-clerical', 'Sales', 'Priv-house-serv', 'Transport-moving', 'Handlers-cleaners', 'Armed-Forces']).astype(int)
+    df_output['relationship_no'] = ~df_input['relationship'].isin(['Own-child', 'Not-in-family', 'Unmarried', 'Wife', 'Other-relative']).astype(int)
+    df_output['race_no'] = ~df_input['race'].isin(['Black', 'Asian-Pac-Islander', 'Other', 'Amer-Indian-Eskimo']).astype(int)
+    df_output['native-country_no'] = (df_input['native-country'] == 'United-States').astype(int)
+
+    return df_output
+
+</end>
+
+---DIVIDER---
+
+def extracting_features_yes(df_input):
+    df_output = pd.DataFrame()
+    df_output['age_40'] = (df_input['age'] >= 40).astype(int)
+    df_output['workclass_in'] = (df_input['workclass'].isin(['Private', 'Self-emp-not-inc', 'Self-emp-inc'])).astype(int)
+    df_output['fnlwgt_150000'] = (df_input['fnlwgt'] >= 150000).astype(int)
+    df_output['education_in'] = (df_input['education'].isin(['Bachelors', 'Masters', 'Doctorate', 'Assoc-acdm', 'Assoc-voc', 'Prof-school'])).astype(int)
+    df_output['educational-num_13'] = (df_input['educational-num'] >= 13).astype(int)
+    df_output['marital-status_Married-civ-spouse'] = (df_input['marital-status'] == 'Married-civ-spouse').astype(int)
+    df_output['occupation_in'] = (df_input['occupation'].isin(['Prof-specialty', 'Exec-managerial'])).astype(int)
+    df_output['relationship_Husband'] = (df_input['relationship'] == 'Husband').astype(int)
+    df_output['race_White'] = (df_input['race'] == 'White').astype(int)
+    df_output['hours-per-week_40'] = (df_input['hours-per-week'] >= 40).astype(int)
+    df_output['capital-gain_0'] = (df_input['capital-gain'] > 0).astype(int)
+    df_output['capital-loss_0'] = (df_input['capital-loss'] == 0).astype(int)
+    df_output['native-country_United-States'] = (df_input['native-country'] == 'United-States').astype(int)
+    return df_output
+
+---VERSION---
+
+def extracting_features_no(df_input):
+    df_output = pd.DataFrame()
+    df_output['educational-num_in_range'] = (df_input['educational-num'] >= 6) & (df_input['educational-num'] <= 9)
+    df_output['hours-per-week_in_range'] = (df_input['hours-per-week'] >= 20) & (df_input['hours-per-week'] <= 40)
+    df_output['capital-gain_is_zero'] = df_input['capital-gain'] == 0
+    df_output['capital-loss_is_zero'] = df_input['capital-loss'] == 0
+    df_output['workclass_is_Local-gov'] = df_input['workclass'] == 'Local-gov'
+    df_output['occupation_is_Other-service'] = df_input['occupation'] == 'Other-service'
+    df_output['relationship_is_Husband'] = df_input['relationship'] == 'Husband'
+    df_output['race_is_Black'] = df_input['race'] == 'Black'
+    df_output['gender_is_Male'] = df_input['gender'] == 'Male'
+    df_output['native-country_is_United-States'] = df_input['native-country'] == 'United-States'
+    return df_output
+
+---DIVIDER---
+
+def extracting_features_yes(df_input):
+    df_output = pd.DataFrame()
+    df_output['educational-num_in_range'] = (df_input['educational-num'] >= 13) & (df_input['educational-num'] <= 16)
+    df_output['hours-per-week_in_range'] = (df_input['hours-per-week'] >= 40) & (df_input['hours-per-week'] <= 60)
+    df_output['capital-gain_in_range'] = (df_input['capital-gain'] >= 4386) & (df_input['capital-gain'] <= 10000)
+    df_output['capital-loss_is_zero'] = (df_input['capital-loss'] == 0)
+    df_output['workclass_is_Private'] = (df_input['workclass'] == 'Private')
+    df_output['occupation_is_Prof-specialty'] = (df_input['occupation'] == 'Prof-specialty')
+    df_output['relationship_is_Husband'] = (df_input['relationship'] == 'Husband')
+    df_output['race_is_White'] = (df_input['race'] == 'White')
+    df_output['gender_is_Male'] = (df_input['gender'] == 'Male')
+    df_output['native-country_is_United-States'] = (df_input['native-country'] == 'United-States')
+    return df_output
